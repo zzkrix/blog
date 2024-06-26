@@ -1,0 +1,89 @@
+// *************************************************************
+// 目录和上一行的间距
+.contents {
+    margin-top: 0;
+
+    ol {
+        counter-reset: item;
+
+        li {
+            &::before {
+                counter-increment: item;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+// *************************************************************
+// body 和目录（TOC）的间距
+.post-body {
+    margin-top: 3em !important;
+
+    a {
+        text-decoration: underline;
+        text-decoration-color: var(--color-contrast-low);
+
+        &:hover {
+            text-decoration-color: alpha(var(--color-primary), 0.5);
+        }
+    }
+}
+
+// *************************************************************
+// 正文和相关文章的间距
+.post-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-contrast-lower);
+    font-weight: 700;
+    margin-top: 3em;
+    padding-top: 0.618em;
+}
+
+// *************************************************************
+// 正文和标签的间距
+.post-tags {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 90%;
+}
+
+// *************************************************************
+// 首页文章之间的间隔
+article.content.post.home {
+    margin-top: 4em;
+}
+
+// *************************************************************
+// 整体页面与浏览器边缘的间隔
+.main {
+    padding-top: 3em;
+    padding-bottom: 6em;
+    display: block;
+}
+
+// *************************************************************
+// 首页
+.home {
+    .poetry {
+        text-align: left;
+        font-size: 1.5em;
+        width: auto;
+        max-width: 26em;
+        margin: 0 auto;
+        padding: 6em 1em 1em;
+    }
+
+    // .poetry h2:first-of-type {
+    //     text-align: center; 
+    // }
+
+    .poetry img {
+        padding: 5em 0em 0em;
+        display: block; /* 将图片设置为块级元素 */
+        margin: 0 auto; /* 使用 margin 属性来水平居中图片 */
+    }
+}
