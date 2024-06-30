@@ -72,7 +72,7 @@ panic: err
 
 goroutine 1 [running]:
 main.main()
-    /Users/odejio/demo/main.go:4 +0x25
+    /Users/admin/demo/main.go:4 +0x25
 ```
 
 加参数`-trimpath`后：
