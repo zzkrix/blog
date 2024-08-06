@@ -54,3 +54,12 @@ python main.py --cpu --listen 0.0.0.0
 ![2024-08-05-22-20-SxCWvA](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-05-22-20-SxCWvA.png)
 
 ![2024-08-05-22-19-IvXVtG](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-05-22-19-IvXVtG.png)
+
+同样的提示词，steps 设置成 20，跑了第二遍：
+
+![2024-08-06-08-46-0pRGZr](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-06-08-46-0pRGZr.png)
+
+![2024-08-06-08-48-8mEXJI](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-06-08-48-8mEXJI.png)
+
+so，自由就是张开翅膀，拥抱阳光？
+
