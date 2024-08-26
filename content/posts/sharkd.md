@@ -13,7 +13,7 @@ categories = ["sharkd"]
 
 sharkd 用来解析数据包，并提供接口用于数据查询（tcp 或本地 socket）。
 
-可能是文档太久未更新，官方文档中的使用方法有错误，通过查看 [sharkd 源码](https://gitlab.com/wireshark/wireshark/-/blob/master/sharkd.c?ref_type=heads)，
+可能是文档太久未更新，官方文档中的使用方法有错误，通过查看 [sharkd 源码](https://github.com/wireshark/wireshark/blob/master/sharkd.c)，
 
 发现所有发送给 sharkd 的请求格式都应该是类似 `{"jsonrpc":"2.0","id":1, "method": "xxx"}`，而不是官方文档中的 `{"req": "xxx"}`。
 
