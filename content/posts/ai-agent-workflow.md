@@ -86,4 +86,4 @@ RAG（Retrieval-Augmented Generation）是近年来流行的一种结合信息�
 
 [为什么大佬都在说 Agent 是未来？换个角度来谈一谈](https://www.aixinzhijie.com/article/6845404)
 
-[吴恩达红杉美国 AI 峰会谈 Agent Workflow 以及 4 种主流设计模式_腾讯新闻](<<https://new.qq.com/rain/a/20240329A041XC00>)
+[吴恩达红杉美国 AI 峰会谈 Agent Workflow 以及 4 种主流设计模式_腾讯新闻](<https://new.qq.com/rain/a/20240329A041XC00>)
