@@ -136,7 +136,9 @@ conda remove --name <env_name> --all
 conda deactivate
 ```
 
-## conda & venv
+## 其他
+
+### conda & venv
 
 conda 管理的是 python 多版本，venv 管理的是多项目的依赖。
 
@@ -148,7 +150,7 @@ conda 管理的是 python 多版本，venv 管理的是多项目的依赖。
 
 在该虚拟环境里安装的包，只在该虚拟环境内有效。
 
-## 其他
+### 多语言支持
 
 实际上，conda 不仅可以用来管理 python，还可以管理「[其他语言](https://github.com/conda/conda/blob/ef93541d0132837ede502a2b62e88d9169cdc872/conda/base/constants.py#L286-L303)」。比如创建一个 go1.21 的 conda 环境：
 
@@ -166,7 +168,7 @@ conda create --name go1.21 go=1.21
 
 至于第二点，嗯。。。反正我没这个需求。
 
----
+### 商用风险
 
 [官方说明](https://docs.anaconda.com/miniconda/)里有这么一段话：
 ![2024-08-30-17-26-KL5Xuy](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-30-17-26-KL5Xuy.png)
@@ -175,20 +177,19 @@ conda create --name go1.21 go=1.21
 
 Miniconda 可供任何人免费使用！但是，只有个人和小型组织（少于 200 名员工）才能免费访问 Anaconda 的公共软件包存储库。大型组织和任何嵌入或镜像 Anaconda 存储库的人都需要付费许可证。有关详细信息，请参阅 [TOS](https://legal.anaconda.com/policies/en/)。
 
----
+### Miniforge
 
-还有一个和 conda 类似的社区驱动的项目：
+还有一个和 conda 类似的社区驱动的项目 miniforge:
 
-miniforge:
 <https://github.com/conda-forge/miniforge>.
 
 <https://conda-forge.org/docs/user/introduction/>
 
 据了解是为了解决 conda 在包管理方面的问题（主要是慢、分散），以及对 arm 平台的支持，用法和 conda 一样。如果只用来管理语言多版本环境，这俩没啥区别。
 
----
+### 卸载
 
-[卸载 conda](https://docs.anaconda.com/anaconda/install/uninstall/):
+<https://docs.anaconda.com/anaconda/install/uninstall/>
 
 ```bash
 conda activate
