@@ -150,14 +150,22 @@ conda 管理的是 python 多版本，venv 管理的是多项目的依赖。
 
 ## 其他
 
+实际上，conda 不仅可以用来管理 python，还可以管理其他语言。
+
+比如创建一个 go1.21 的 conda 环境：
+
+```bash
+conda create --name go1.21 go=1.21
+```
+
+更多支持语言看[这里](https://github.com/conda/conda/blob/ef93541d0132837ede502a2b62e88d9169cdc872/conda/base/constants.py#L286-L303)。
+
 [官方说明](https://docs.anaconda.com/miniconda/)里有这么一段话：
 ![2024-08-30-17-26-KL5Xuy](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-30-17-26-KL5Xuy.png)
 
 翻译过来就是：
 
 Miniconda 可供任何人免费使用！但是，只有个人和小型组织（少于 200 名员工）才能免费访问 Anaconda 的公共软件包存储库。大型组织和任何嵌入或镜像 Anaconda 存储库的人都需要付费许可证。有关详细信息，请参阅 [TOS](https://legal.anaconda.com/policies/en/)。
-
-啊，恶心🤢～
 
 [卸载 conda](https://docs.anaconda.com/anaconda/install/uninstall/):
 
