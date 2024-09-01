@@ -150,15 +150,23 @@ conda 管理的是 python 多版本，venv 管理的是多项目的依赖。
 
 ## 其他
 
-实际上，conda 不仅可以用来管理 python，还可以管理其他语言。
-
-比如创建一个 go1.21 的 conda 环境：
+实际上，conda 不仅可以用来管理 python，还可以管理「[其他语言](https://github.com/conda/conda/blob/ef93541d0132837ede502a2b62e88d9169cdc872/conda/base/constants.py#L286-L303)」。比如创建一个 go1.21 的 conda 环境：
 
 ```bash
 conda create --name go1.21 go=1.21
 ```
 
-更多支持语言看[这里](https://github.com/conda/conda/blob/ef93541d0132837ede502a2b62e88d9169cdc872/conda/base/constants.py#L286-L303)。
+据我目前理解，conda 要解决的问题有以下两点：
+
+1、在同一台机器上创建与切换某个编程语言的多个版本环境。
+
+2、将语言依赖包集中在 conda 自己的 channel 去下载，并提供一些优化支持。比如可以用 `conda install numpy=1.21` 替代 `pip install numpy==1.21`
+
+个人觉得第一点是比较好的，确实某些时候有这个需要。
+
+至于第二点，嗯。。。反正我没这个需求。
+
+---
 
 [官方说明](https://docs.anaconda.com/miniconda/)里有这么一段话：
 ![2024-08-30-17-26-KL5Xuy](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-08-30-17-26-KL5Xuy.png)
@@ -166,6 +174,19 @@ conda create --name go1.21 go=1.21
 翻译过来就是：
 
 Miniconda 可供任何人免费使用！但是，只有个人和小型组织（少于 200 名员工）才能免费访问 Anaconda 的公共软件包存储库。大型组织和任何嵌入或镜像 Anaconda 存储库的人都需要付费许可证。有关详细信息，请参阅 [TOS](https://legal.anaconda.com/policies/en/)。
+
+---
+
+还有一个和 conda 类似的社区驱动的项目：
+
+miniforge:
+<https://github.com/conda-forge/miniforge>.
+
+<https://conda-forge.org/docs/user/introduction/>
+
+据了解是为了解决 conda 在包管理方面的问题（主要是慢、分散），以及对 arm 平台的支持，用法和 conda 一样。如果只用来管理语言多版本环境，这俩没啥区别。
+
+---
 
 [卸载 conda](https://docs.anaconda.com/anaconda/install/uninstall/):
 
