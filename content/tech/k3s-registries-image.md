@@ -35,7 +35,7 @@ configs:
       ca_file: /etc/harbor/cert/ca.crt
 ```
 
-mirrors 里的"*" 表示匹配所有镜像请求，即所有容器镜像的拉取请求都会首先尝试从 <https://harbor.b5g.sdfnri.com> 下载，如果不可用则退回到 <https://hub.docker.com>。
+mirrors 里的"*" 表示匹配所有镜像请求，即所有容器镜像的拉取请求都会首先尝试从 <https://your-private-repo.com> 下载，如果不可用则退回到 <https://hub.docker.com>。
 
 其中 mirrors 可以配置多项：
 
