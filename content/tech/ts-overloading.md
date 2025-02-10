@@ -1,5 +1,5 @@
 +++
-title = 'TypeScript 函数重载'
+title = 'TypeScript - 函数重载'
 date = 2025-02-08T16:18:57+08:00
 draft = false
 tags = ["TypeScript"]
