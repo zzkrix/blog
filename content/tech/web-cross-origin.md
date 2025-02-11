@@ -6,7 +6,7 @@ tags = ["web"]
 categories = ["web"]
 +++
 
-![2025-02-11-15-19-2aKAtG](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-11-15-19-2aKAtG.png)
+![2025-02-11-17-16-XR4S9O](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-11-17-16-XR4S9O.png)
 
 ## 浏览器同源策略
 
@@ -215,7 +215,7 @@ func main() {
 </html>
 ```
 
-### 代码测试结果
+测试结果：
 
 ![2025-02-11-16-22-JDGTlL](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-11-16-22-JDGTlL.png)
 
@@ -227,7 +227,7 @@ func main() {
 
 - 请求 server2 时，浏览器判断这个请求是`非简单请求`，需要先发送一个`预检请求 OPTIONS`，所以浏览器自动发送了一个`OPTIONS`请求给 server2。server2 判断`http://localhost:8000`不允许跨域访问，所以返回了 403。
 
-### 简单请求（Simple Requests）
+## 简单请求（Simple Requests）
 
 对于简单请求，浏览器会直接发送实际请求，而不会发送 OPTIONS 预检请求。简单请求需要满足以下条件：
 
@@ -241,7 +241,7 @@ func main() {
   
 在这种情况下，浏览器会直接发送请求到服务器，并在请求头中添加 Origin 字段，表示请求的来源。服务器需要在响应头中设置 Access-Control-Allow-Origin 字段，以允许跨域访问
 
-### 预检请求（Preflight Request）
+## 预检请求（Preflight Request）
 
 对于非简单请求（复杂请求），浏览器会先发送一个 OPTIONS 预检请求，以确定服务器是否允许跨域访问。非简单请求包括以下情况：
 
@@ -258,3 +258,11 @@ func main() {
 - Access-Control-Max-Age：预检请求的结果可以被缓存的时间。
   
 如果服务器允许跨域访问，浏览器会继续发送实际请求；否则，浏览器会阻止请求并抛出 CORS 错误。
+
+需要注意的是，浏览器会缓存 OPTIONS 请求结果，所以抓包时可以看到，非简单请求不会每次都发送 OPTIONS。
+
+浏览器缓存 OPTIONS 请求结果的时间主要由服务器返回的 Access-Control-Max-Age 字段决定。Access-Control-Max-Age 字段用于指定预检请求（OPTIONS 请求）的结果可以缓存的时间，单位是秒。
+
+例如，如果服务器返回 Access-Control-Max-Age: 1800，那么浏览器会在接下来的 1800 秒（30 分钟）内缓存该 OPTIONS 请求的结果。在此期间，相同的跨域请求（URL 和 header 字段都相同）不会再触发预检请求。
+
+浏览器可能会有自己的默认最大缓存时间限制，实际缓存时间会取 Access-Control-Max-Age 和浏览器默认限制的较小值。
