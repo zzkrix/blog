@@ -7,7 +7,7 @@ categories = ["web"]
 +++
 
 
-## Cookie
+## 简介
 
 每个会话可以使用多个 Cookie（实测 Chrome 保存 1000 多个也可以，但正常人没这么干的）。
 
@@ -23,7 +23,7 @@ Cookie 由服务端生成，并通过响应的 Header（Set-Cookie 字段）返�
 
 ![2025-02-13-10-59-ulrTdj](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-13-10-59-ulrTdj.jpg)
 
-## Cookie 属性解释
+## 属性解释
 
 单个 Cookie 在 Golang 中的定义如下（在"net/http"下）：
 
@@ -94,7 +94,7 @@ cookie := &http.Cookie{
 - HttpOnly：true，表示这个 Cookie 无法被客户端 js 脚本访问，只能被浏览器访问。
 - SameSite：Strict，表示这个 Cookie 只在同站请求下有效，有效防止 CSRF 攻击。
 
-## Go 使用 Cookie 示例
+## 使用示例
 
 ```golang
 package main
