@@ -1,5 +1,5 @@
 +++
-title = 'HTTP Cookie'
+title = 'HTTP Cookie 笔记'
 date = 2025-02-13T09:37:57+08:00
 draft = false
 tags = ["web"]
@@ -7,12 +7,7 @@ categories = ["web"]
 +++
 
 
-## 参考资料
-
-- [Mozilla - HTTP Cookie](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
-- [阮一峰 - SameSite 属性](https://www.ruanyifeng.com/blog/2019/09/cookie-samesite.html)
-  
-## 介绍
+## Cookie
 
 每个会话可以使用多个 Cookie（实测 Chrome 保存 1000 多个也可以，但正常人没这么干的）。
 
@@ -99,7 +94,7 @@ cookie := &http.Cookie{
 - HttpOnly：true，表示这个 Cookie 无法被客户端 js 脚本访问，只能被浏览器访问。
 - SameSite：Strict，表示这个 Cookie 只在同站请求下有效，有效防止 CSRF 攻击。
 
-## Go 使用 cookie 示例
+## Go 使用 Cookie 示例
 
 ```golang
 package main
@@ -183,3 +178,8 @@ func handleDeleteCookie(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Cookie 'session_token' has been deleted.")
 }
 ```
+
+## 参考资料
+
+- [Mozilla - HTTP Cookie](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
+- [阮一峰 - SameSite 属性](https://www.ruanyifeng.com/blog/2019/09/cookie-samesite.html)
