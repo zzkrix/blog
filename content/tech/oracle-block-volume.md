@@ -8,7 +8,7 @@ categories = ["oracle"]
 
 ## 背景
 
-之前用[Oracle 永久免费套餐](https://www.oracle.com/cn/cloud/free/)申请到一台服务器，默认只有 40 多 G 的磁盘存储空间。
+之前用[Oracle 永久免费套餐](https://www.oracle.com/cn/cloud/free/)申请到一台服务器，默认只有 40G 的磁盘存储空间。
 
 注意到免费套餐里有块存储，研究了一下怎么挂载到服务器里，记录如下。
 
