@@ -1,5 +1,5 @@
 +++
-title = 'Oracle 服务器新增挂载卷'
+title = 'Oracle 服务器使用块存储'
 date = 2025-02-19T21:09:36+08:00
 draft = false
 tags = ["oracle"]
@@ -28,7 +28,7 @@ categories = ["oracle"]
 
 创建好块存储后，在创建好的快存储详情页面，选择“附加的实例” -> “附加到实例”。
 
-选择要挂载到的实例，“设备路径”选一个你目标机器不存在的目录即可。
+选择要挂载到的实例，“设备路径”选一个与你目标机器不冲突的目录即可。
 
 ![2025-02-19-21-29-khYk0z](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-19-21-29-khYk0z.png)
 
@@ -74,6 +74,13 @@ $ fdisk /dev/sdb
 再次执行`fdisk -l`看到已经分区为`/dev/sdb1`。
 
 ```bash
+$ fdisk -l
+...
+Device     Boot Start       End   Sectors Size Id Type
+/dev/sdb1        2048 104857599 104855552  50G 83 Linux
+```
+
+```bash
 # 进行格式化
 $ mkfs.ext4 /dev/sdb1
 
@@ -97,7 +104,7 @@ $ mount /dev/sdb1 /mnt/blockVolume01
 
 注意事项：
 
-> `_netdev,nofail` 这两个选项要加上。
+> `_netdev,nofail` 在“iSCSI 命令和信息”里面 Oracle 已经提示了这两个选项要加上。
 >
 > `_netdev` 表示这是一个依赖网络的挂载，挂载操作需要在网络服务启动后再进行（oracle 的这个块存储默认是用网络访问的）。
 >
