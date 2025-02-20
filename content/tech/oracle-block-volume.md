@@ -36,6 +36,8 @@ categories = ["oracle"]
 
 ![2025-02-19-21-39-D2438w](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-19-21-39-D2438w.png)
 
+复制“连接”里面的命令，到目标实例去执行。
+
 ![2025-02-19-21-42-MayNcn](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-19-21-42-MayNcn.png)
 
 ![2025-02-19-21-44-Z6bFQD](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-19-21-44-Z6bFQD.png)
@@ -95,8 +97,8 @@ $ mount /dev/sdb1 /mnt/blockVolume01
 
 注意事项：
 
-> `_netdev,nofail` 这两个选项要加上
+> `_netdev,nofail` 这两个选项要加上。
 >
-> `_netdev` 表示这是一个依赖网络的挂载，挂载操作需要在网络服务启动后再进行（oracle 的这个块存储默认是用网络访问的）
+> `_netdev` 表示这是一个依赖网络的挂载，挂载操作需要在网络服务启动后再进行（oracle 的这个块存储默认是用网络访问的）。
 >
 > `nofail` 表示即使挂载失败，也不会影响系统启动。
