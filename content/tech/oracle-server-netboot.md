@@ -3,8 +3,8 @@ title: "Oracle 服务器使用 netboot 重装系统"
 date: 2023-12-07 13:30:25
 description: ""
 draft: false
-tags: ["其他"]
-categories: ["其他"]
+tags = ["oracle"]
+categories: ["oracle"]
 series: []
 ---
 
