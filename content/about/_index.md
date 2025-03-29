@@ -35,7 +35,7 @@ displayReadingTime: false
 
 ### 硬件
 
-电脑：MacBook Pro 2019（15.6 / 24G+256G）
+电脑：MacBook Pro 2019（15.6 / 16G+256G）
 
 键盘：Leopold FC660MBT
 
