@@ -43,7 +43,7 @@ displayReadingTime: false
 
 手机：iPhone 11 Pro（256G）
 
-软路由：R2S + [Kwrt](https://github.com/kiddin9/Kwrt)
+软路由：R2S + [Kwrt](https://github.com/kiddin9/Kwrt) + Passwall
 
 ### 联系
 
