@@ -198,13 +198,13 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
 
 调试好后，觉得没问题，就可以尝试上架 chrome 应用商店。
 
-如果是首次开发 chrome 插件，需要在[这里](https://developer.chrome.com/docs/webstore/register?hl=zh-cn)先注册开发者账号。
+如果是首次开发 chrome 插件，需要在「[这里](https://developer.chrome.com/docs/webstore/register?hl=zh-cn)」先注册开发者账号。
 
 注册时需要填写支付信息，并且需要一次性支付 5 美元。
 
 然后将自己插件的文件夹压缩成`.zip`文件。
 
-在[这里](https://developer.chrome.com/docs/webstore/publish?hl=zh-cn)填写插件信息进行上架，等待审核即可。
+在「[这里](https://developer.chrome.com/docs/webstore/publish?hl=zh-cn)」填写插件信息进行上架，等待审核即可。
 
 ## 其他
 
