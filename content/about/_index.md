@@ -48,7 +48,7 @@ displayReadingTime: false
 ### 赞赏
 
 <div style="display: flex; gap: 0; justify-content: flex-start; align-items: flex-start;">
-    <img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-02-13-58-ZBtu1M.jpg" style="width: 30%; margin: 0; padding: 0;">
+    <img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/zs-mini.jpg" style="width: 30%; margin: 0; padding: 0;">
 </div>
 
 ### 联系
