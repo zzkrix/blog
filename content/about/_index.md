@@ -43,12 +43,12 @@ displayReadingTime: false
 
 手机：iPhone 11 Pro（256G）
 
-软路由：R2S + [Kwrt](https://github.com/kiddin9/Kwrt) + Passwall
+软路由：R2S + [Kwrt](https://github.com/kiddin9/Kwrt) + OpenClash
 
 ### 赞赏
 
 <div style="display: flex; gap: 0; justify-content: flex-start; align-items: flex-start;">
-    <img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-03-31-13-09-gGyqMk.jpg" style="width: 30%; margin: 0; padding: 0;">
+    <img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-02-13-58-ZBtu1M.jpg" style="width: 30%; margin: 0; padding: 0;">
 </div>
 
 ### 联系
@@ -58,4 +58,3 @@ WeChat: d3hpOG1wYmV6cTl0aTd6MAo=
 Email: [zzkrix56@gmail.com](mailto:zzkrix56@gmail.com)
 
 Github: [https://github.com/zzkrix](https://github.com/zzkrix)
-

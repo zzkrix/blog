@@ -1,5 +1,5 @@
 +++
-title = 'Chrome 插件 - kimi 历史会话清理助手'
+title = '浏览器插件 - kimi 历史会话清理助手'
 date = 2025-03-30T21:24:50+08:00
 draft = false
 tags = ["chrome"]
@@ -43,9 +43,9 @@ categories = ["chrome"]
 ```js
 {
     "manifest_version": 3,
-    "name": "Kimi 历史会话清理器",
+    "name": "kimi 历史会话清理助手",
     "version": "1.0.0",
-    "description": "一键清理 Kimi AI 的历史会话记录",
+    "description": "一键清理 Kimi AI 的历史会话记录。",
     "icons": {
         "16": "icons/16.png",
         "32": "icons/32.png",
@@ -210,8 +210,8 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
 
 插件市场：
 
-- [x] [Chrome](https://chromewebstore.google.com/detail/kimi-%E5%8E%86%E5%8F%B2%E4%BC%9A%E8%AF%9D%E6%B8%85%E7%90%86%E5%99%A8/pjjimhcohddafofeloikfbpbbejkoiff?hl=zh-CN&utm_source=ext_sidebar)
-- [x] [Edge](https://microsoftedge.microsoft.com/addons/detail/kimi-%E5%8E%86%E5%8F%B2%E4%BC%9A%E8%AF%9D%E6%B8%85%E7%90%86%E5%99%A8/pgnnclhebjklcndnhejgknnmclpaoghn)
+- [x] [Chrome - kimi 历史会话清理助手](https://chromewebstore.google.com/detail/kimi-%E5%8E%86%E5%8F%B2%E4%BC%9A%E8%AF%9D%E6%B8%85%E7%90%86%E5%99%A8/pjjimhcohddafofeloikfbpbbejkoiff?hl=zh-CN&utm_source=ext_sidebar)
+- [x] [Edge - kimi 历史会话清理助手](https://microsoftedge.microsoft.com/addons/detail/kimi-%E5%8E%86%E5%8F%B2%E4%BC%9A%E8%AF%9D%E6%B8%85%E7%90%86%E5%99%A8/pgnnclhebjklcndnhejgknnmclpaoghn)
 
 项目源码： <https://github.com/zzkrix/kimi-history-cleaner>
 
