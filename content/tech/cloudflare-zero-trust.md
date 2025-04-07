@@ -50,7 +50,7 @@ categories = ["cloudflare", "内网穿透"]
 
 然后点击上面的`公共主机名`，去配置公网域名，填写刚才购买的域名和你内网要代理的地址，这里我用的测试地址是 <http://192.168.1.165:8000。>
 
-![2025-04-07-15-34-WQkvEw](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-07-15-34-WQkvEw.png)
+![2025-04-07-15-56-xNTvYz](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-07-15-56-xNTvYz.png)
 
 之后就可以在浏览器通过配置的域名访问到你的内网服务了，Okk～。
 
