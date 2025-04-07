@@ -11,7 +11,7 @@ displayReadingTime: false
 
 ![eureka](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-01-22-14-51-MgyDly.jpg)
 
-### 推荐工具
+### 常用工具推荐
 
 | 名称 | 用途 |
 | :--- | :--- |
@@ -25,13 +25,14 @@ displayReadingTime: false
 | [stats](https://github.com/exelban/stats) | 状态栏显示系统信息（cpu、内存、风扇、网速...）|
 | [腾讯柠檬](https://lemon.qq.com/) | 清理系统垃圾、卸载软件 |
 
-### Chrome 插件
+### 常用 Chrome 插件推荐
 
 | 名称 | 用途 |
 | :--- | :--- |
 | [AdBlock](https://chromewebstore.google.com/detail/adblock-%E6%8B%A6%E6%88%AA%E6%95%B4%E4%B8%AA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%B9%BF%E5%91%8A/gighmmpiobklfepjocnamgkkbiglidom) | 拦截网页广告 |
 | [Vimium](https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) | vim 模式操作浏览器 |
 | [沉浸式翻译](https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh) | 网页、视频翻译|
+| [kimi 历史会话清理助手](https://chromewebstore.google.com/detail/kimi-%E5%8E%86%E5%8F%B2%E4%BC%9A%E8%AF%9D%E6%B8%85%E7%90%86%E5%8A%A9%E6%89%8B/pjjimhcohddafofeloikfbpbbejkoiff) | 清理kimi.ai的历史会话记录 | 
 
 ### 硬件
 
@@ -58,3 +59,4 @@ WeChat: d3hpOG1wYmV6cTl0aTd6MAo=
 Email: [zzkrix56@gmail.com](mailto:zzkrix56@gmail.com)
 
 Github: [https://github.com/zzkrix](https://github.com/zzkrix)
+
