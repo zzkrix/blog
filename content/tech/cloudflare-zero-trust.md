@@ -18,6 +18,8 @@ categories = ["cloudflare", "内网穿透"]
 
 只需要一个 cloudflare 账号和一个域名即可，也基本没有带宽限制。
 
+## 配置
+
 ### 准备域名
 
 注册 cloudflare 账号，登录<https://dash.cloudflare.com/>。
