@@ -12,6 +12,8 @@ categories = ["cloudflare", "内网穿透"]
 
 ![2025-04-07-15-10-nQi19R](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-07-15-10-nQi19R.png)
 
+但前提是你需要有一个具备公网 IP 的服务器用来部署服务端。
+
 并且想高速上传下载的的话，还得花不少钱买云厂商的带宽。
 
 今天介绍一个不使用服务器就可以实现的方案。
