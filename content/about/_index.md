@@ -45,7 +45,7 @@ displayReadingTime: false
 
 软路由：R2S + [Kwrt](https://github.com/kiddin9/Kwrt) + OpenClash
 
-### 赞赏
+### 打赏
 
 <div style="display: flex; gap: 0; justify-content: flex-start; align-items: flex-start;">
     <img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/zs-mini.jpg" style="width: 30%; margin: 0; padding: 0;">
