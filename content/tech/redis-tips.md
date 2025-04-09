@@ -47,6 +47,12 @@ sentinel 系统可以监视一个或者多个 redis master 服务，以及这些
 
 ![](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/image-20230310213230350.png)
 
+## 监控 redis
+
+`redis-cli monitor`
+
+> 会输出 redis 命令的执行细节
+
 ## re-hash 过程
 
 数据结构里存放了两个 hash 结构，一个是当前的，一个是 rehash 时候使用的。
