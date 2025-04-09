@@ -27,31 +27,45 @@ type DistributedLock struct {
     key        string
     value      string
     expiration time.Duration
-    conn       redis.Conn
+    pool       *redis.Pool
     mu         sync.Mutex
     stopChan   chan struct{}
+    once       sync.Once
 }
 
-func NewDistributedLock(conn redis.Conn, key string, expiration time.Duration) *DistributedLock {
+func NewDistributedLock(pool *redis.Pool, key string, expiration time.Duration) *DistributedLock {
     return &DistributedLock{
         key:        key,
         value:      fmt.Sprintf("%d", time.Now().UnixNano()),
         expiration: expiration,
-        conn:       conn,
+        pool:       pool,
         stopChan:   make(chan struct{}),
     }
 }
 
-func (l *DistributedLock) Acquire() bool {
+func (l *DistributedLock) Acquire() error {
     l.mu.Lock()
     defer l.mu.Unlock()
 
-    reply, err := redis.String(l.conn.Do("SET", l.key, l.value, "NX", "PX", int(l.expiration.Milliseconds())))
-    if err != nil || reply != "OK" {
-        return false
+    conn := l.pool.Get()
+    defer conn.Close()
+
+    // https://redis.io/docs/latest/commands/set/
+    // SET key value [NX | XX] [GET] [EX seconds | PX milliseconds |
+    // EX seconds：将键的过期时间设置为 seconds 秒。执行 SET key value EX seconds 的效果等同于执行 SETEX key seconds value。
+    // PX milliseconds：将键的过期时间设置为 milliseconds 毫秒。执行 SET key value PX milliseconds 的效果等同于执行 PSETEX key milliseconds value。
+    // NX：只在键不存在时，才对键进行设置操作。执行 SET key value NX 的效果等同于执行 SETNX key value。
+    // XX：只在键已经存在时，才对键进行设置操作。
+    reply, err := redis.String(conn.Do("SET", l.key, l.value, "NX", "PX", int(l.expiration.Milliseconds())))
+    if err != nil {
+        return err
     }
+    if reply != "OK" {
+        return fmt.Errorf("failed to acquire lock")
+    }
+
     go l.renewalLoop()
-    return true
+    return nil
 }
 
 func (l *DistributedLock) renewalLoop() {
@@ -61,50 +75,91 @@ func (l *DistributedLock) renewalLoop() {
     for {
         select {
         case <-ticker.C:
-            l.mu.Lock()
-            storedValue, err := redis.String(l.conn.Do("GET", l.key))
-            if err == nil && storedValue == l.value {
-                _, _ = l.conn.Do("PEXPIRE", l.key, int(l.expiration.Milliseconds()))
+            select { // 防止退出和定时器并发时，定时器先被 select 执行导致的本该失效的锁被再次延长。
+            case <-l.stopChan:
+                return
+            default:
+                if err := l.renewal(); err != nil {
+                    fmt.Println("Error renewing lock:", err)
+                }
             }
-            l.mu.Unlock()
         case <-l.stopChan:
             return
         }
     }
 }
 
-func (l *DistributedLock) Release() {
+func (l *DistributedLock) renewal() error {
     l.mu.Lock()
     defer l.mu.Unlock()
 
-    close(l.stopChan)
+    conn := l.pool.Get()
+    defer conn.Close()
 
-    script := redis.NewScript(1, `
+    storedValue, err := redis.String(conn.Do("GET", l.key))
+    if err != nil {
+        return err
+    }
+
+    if storedValue == l.value {
+        _, err = conn.Do("SET", l.key, l.value, "XX", "PX", int(l.expiration.Milliseconds()))
+        if err != nil {
+            return err
+        }
+    }
+
+    return nil
+}
+
+func (l *DistributedLock) Release() (err error) {
+    l.mu.Lock()
+    defer l.mu.Unlock()
+
+    l.once.Do(func() {
+        close(l.stopChan)
+
+        conn := l.pool.Get()
+        defer conn.Close()
+
+        script := redis.NewScript(1, `
         if redis.call("GET", KEYS[1]) == ARGV[1] then
             return redis.call("DEL", KEYS[1]) 
         else 
             return 0
         end`)
-    _, _ = script.Do(l.conn, l.key, l.value)
+        _, err = script.Do(conn, l.key, l.value)
+    })
+
+    return
 }
 
 func main() {
-    conn, err := redis.Dial("tcp", "localhost:6379")
-    if err != nil {
-        panic(err)
+    pool := &redis.Pool{
+        Dial: func() (redis.Conn, error) {
+            return redis.Dial("tcp", "localhost:6379")
+        },
+        MaxIdle:     10,
+        MaxActive:   100,
+        IdleTimeout: 300 * time.Second,
     }
-    defer conn.Close()
+    defer pool.Close()
 
-    lock := NewDistributedLock(conn, "my_lock", 10*time.Second)
-    if lock.Acquire() {
-        defer lock.Release()
+    lock := NewDistributedLock(pool, "my_lock", 10*time.Second)
 
-        fmt.Println("Lock acquired!")
-        time.Sleep(15 * time.Second) // 模拟长时间操作
+    if err := lock.Acquire(); err != nil {
+        fmt.Println("Failed to acquire lock!", err)
+        return
+    }
+    defer func() {
+        if err := lock.Release(); err != nil {
+            fmt.Println("Failed to release lock!", err)
+            return
+        }
         fmt.Println("Lock released!")
-    } else {
-        fmt.Println("Failed to acquire lock!")
-    }
+    }()
+
+    fmt.Println("Lock acquired!")
+    time.Sleep(15 * time.Second) // 模拟长时间操作
 }
 ```
 
