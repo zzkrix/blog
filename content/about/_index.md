@@ -60,3 +60,9 @@ WeChat: d3hpOG1wYmV6cTl0aTd6MAo=
 Email: [zzkrix56@gmail.com](mailto:zzkrix56@gmail.com)
 
 Github: [https://github.com/zzkrix](https://github.com/zzkrix)
+
+### 推广
+
+阿里云产品 [9 折优惠券🔗](https://www.aliyun.com/minisite/goods?userCode=4zfrxakm)
+
+![img](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-07-23-15-25-27-gcX80x.jpg)
