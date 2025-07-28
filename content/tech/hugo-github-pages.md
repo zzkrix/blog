@@ -1,10 +1,10 @@
-+++
-title = '使用 hugo+github 部署静态博客'
-date = 2024-01-21T00:23:12+08:00
-draft = false
-tags = ["blog", "github", "hugo"]
-categories = ["blog"]
-+++
+---
+title: '使用 hugo+github 部署静态博客'
+date: '2024-01-21T00:23:12+08:00'
+draft: false
+tags: ['blog', 'github', 'hugo']
+categories: ['blog']
+---
 
 ## 前言
 

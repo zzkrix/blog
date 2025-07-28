@@ -1,10 +1,10 @@
-+++
-title = '本地部署大模型'
-date = 2024-07-25T16:10:28+08:00
-draft = false
-tags = ["ai"]
-categories = ["ai"]
-+++
+---
+title: '本地部署大模型'
+date: '2024-07-25T16:10:28+08:00'
+draft: false
+tags: ['ai']
+categories: ['ai']
+---
 
 ## 部署 ollama
 

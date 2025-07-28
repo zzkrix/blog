@@ -1,10 +1,10 @@
-+++
-title = 'Linux & iterm2 常用快捷键'
-date = 2024-04-02T17:53:53+08:00
-draft = false
-tags = ["linux", "mac", "iterm2"]
-categories = ["linux"]
-+++
+---
+title: 'Linux & iterm2 常用快捷键'
+date: '2024-04-02T17:53:53+08:00'
+draft: false
+tags: ['linux', 'mac', 'iterm2']
+categories: ['linux']
+---
 
 
 Linux 命令行快捷键：

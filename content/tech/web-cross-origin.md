@@ -1,10 +1,10 @@
-+++
-title = '浏览器跨域请求机制'
-date = 2025-02-11T14:27:28+08:00
-draft = false
-tags = ["web"]
-categories = ["web"]
-+++
+---
+title: '浏览器跨域请求机制'
+date: '2025-02-11T14:27:28+08:00'
+draft: false
+tags: ['web']
+categories: ['web']
+---
 
 ![2025-02-11-17-16-XR4S9O](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-11-17-16-XR4S9O.png)
 

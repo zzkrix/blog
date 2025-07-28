@@ -1,10 +1,10 @@
-+++
-title = 'TypeScript - export 用法'
-date = 2025-02-10T13:14:17+08:00
-draft = false
-tags = ["TypeScript"]
-categories = ["TypeScript"]
-+++
+---
+title: 'TypeScript - export 用法'
+date: '2025-02-10T13:14:17+08:00'
+draft: false
+tags: ['TypeScript']
+categories: ['TypeScript']
+---
 
 在  TypeScript 中，`import` 语句用于从其他模块引入功能。根据所导入内容的不同，`import` 语句的语法也有所区别，具体体现在是否使用花括号 `{}`。
 

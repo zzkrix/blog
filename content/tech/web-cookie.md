@@ -1,10 +1,10 @@
-+++
-title = 'HTTP Cookie 笔记'
-date = 2025-02-13T09:37:57+08:00
-draft = false
-tags = ["web"]
-categories = ["web"]
-+++
+---
+title: 'HTTP Cookie 笔记'
+date: '2025-02-13T09:37:57+08:00'
+draft: false
+tags: ['web']
+categories: ['web']
+---
 
 
 ## 简介

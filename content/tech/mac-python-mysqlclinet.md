@@ -1,10 +1,10 @@
-+++
-title = 'Mac 下为 Python 安装 mysqlclinet'
-date = 2024-05-06T14:24:49+08:00
-draft = false
-tags = ["mac", "python"]
-categories = ["mac", "python"]
-+++
+---
+title: 'Mac 下为 Python 安装 mysqlclinet'
+date: '2024-05-06T14:24:49+08:00'
+draft: false
+tags: ['mac', 'python']
+categories: ['mac', 'python']
+---
 
 
 如果直接执行`pip install mysqlclient`，会报错，需要先安装依赖：

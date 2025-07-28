@@ -1,10 +1,10 @@
-+++
-title = 'Oracle 服务器使用块存储'
-date = 2025-02-19T21:09:36+08:00
-draft = false
-tags = ["oracle"]
-categories = ["oracle"]
-+++
+---
+title: 'Oracle 服务器使用块存储'
+date: '2025-02-19T21:09:36+08:00'
+draft: false
+tags: ['oracle']
+categories: ['oracle']
+---
 
 ## 背景
 

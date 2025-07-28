@@ -1,10 +1,10 @@
-+++
-title = 'Conda 安装和使用'
-date = 2024-08-30T14:23:24+08:00
-draft = false
-tags = ["python", "conda"]
-categories = ["python", "conda"]
-+++
+---
+title: 'Conda 安装和使用'
+date: '2024-08-30T14:23:24+08:00'
+draft: false
+tags: ['python', 'conda']
+categories: ['python', 'conda']
+---
 
 
 ## 介绍

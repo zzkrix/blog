@@ -1,10 +1,10 @@
-+++
-title = '浏览器插件 - kimi 历史会话清理助手'
-date = 2025-03-30T21:24:50+08:00
-draft = false
-tags = ["chrome"]
-categories = ["chrome"]
-+++
+---
+title: '浏览器插件 - kimi 历史会话清理助手'
+date: '2025-03-30T21:24:50+08:00'
+draft: false
+tags: ['chrome']
+categories: ['chrome']
+---
 
 ## 背景
 

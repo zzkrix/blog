@@ -1,10 +1,10 @@
-+++
-title = 'Mac 下使用 iterm2 配置 ssh'
-date = 2024-01-21T22:24:12+08:00
-draft = false
-tags = ["iterm2", "mac", "ssh"]
-categories = ["mac"]
-+++
+---
+title: 'Mac 下使用 iterm2 配置 ssh'
+date: '2024-01-21T22:24:12+08:00'
+draft: false
+tags: ['iterm2', 'mac', 'ssh']
+categories: ['mac']
+---
 
 ## 前言
 

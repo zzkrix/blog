@@ -1,10 +1,10 @@
-+++
-title = 'vim 快捷键'
-date = 2025-07-25T23:01:24+08:00
-draft = false
-tags = ["vim"]
-categories = ["vim"]
-+++
+---
+title: 'vim 快捷键'
+date: '2025-07-25T23:01:24+08:00'
+draft: false
+tags: ['vim']
+categories: ['vim']
+---
 
 ## 快捷键
 
