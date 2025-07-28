@@ -1,5 +1,5 @@
 +++
-title = 'Gin 框架中的 c.Next() 的作用'
+title = 'Gin 框架中的 c.Next 的作用'
 date = 2025-07-10T16:17:27+08:00
 draft = false
 tags = ["Golang", "gin"]
