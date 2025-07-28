@@ -1,10 +1,10 @@
-+++
-title = 'JS 学习 - 细碎知识点'
-date = 2025-04-15T14:21:03+08:00
-draft = false
-tags = ["JavaScript"]
-categories = ["JavaScript"]
-+++
+---
+title: 'JS 学习 - 细碎知识点'
+date: '2025-04-15T14:21:03+08:00'
+draft: false
+tags: ['JavaScript']
+categories: ['JavaScript']
+---
 
 ## 参考资料
 

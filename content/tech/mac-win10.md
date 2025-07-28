@@ -1,10 +1,10 @@
-+++
-title = 'Mac 安装 Windows 双系统'
-date = 2024-08-04T12:34:11+08:00
-draft = false
-tags = ["mac", "windows"]
-categories = ["Mac", "windows"]
-+++
+---
+title: 'Mac 安装 Windows 双系统'
+date: '2024-08-04T12:34:11+08:00'
+draft: false
+tags: ['mac', 'windows']
+categories: ['Mac', 'windows']
+---
 
 
 使用 Mac 的”启动转换助理“安装 windows 双系统时，走到最后一步了，出现如下错误：

@@ -1,10 +1,10 @@
-+++
-title = 'JS 学习 - 函数立即执行'
-date = 2025-04-10T21:41:42+08:00
-draft = false
-tags = ["JavaScript"]
-categories = ["JavaScript"]
-+++
+---
+title: 'JS 学习 - 函数立即执行'
+date: '2025-04-10T21:41:42+08:00'
+draft: false
+tags: ['JavaScript']
+categories: ['JavaScript']
+---
 
 > 学习前端中，不停的遇到新姿势，充满“惊喜”🤷。
 

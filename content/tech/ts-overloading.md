@@ -1,10 +1,10 @@
-+++
-title = 'TypeScript - 函数重载'
-date = 2025-02-08T16:18:57+08:00
-draft = false
-tags = ["TypeScript"]
-categories = ["TypeScript"]
-+++
+---
+title: 'TypeScript - 函数重载'
+date: '2025-02-08T16:18:57+08:00'
+draft: false
+tags: ['TypeScript']
+categories: ['TypeScript']
+---
 
 ## 函数重载（Function Overloading）
 

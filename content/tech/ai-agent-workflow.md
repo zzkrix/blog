@@ -1,10 +1,10 @@
-+++
-title = 'AI Agent 和 workflow 介绍'
-date = 2024-08-23T15:05:38+08:00
-draft = false
-tags = ["ai"]
-categories = ["ai"]
-+++
+---
+title: 'AI Agent 和 workflow 介绍'
+date: '2024-08-23T15:05:38+08:00'
+draft: false
+tags: ['ai']
+categories: ['ai']
+---
 
 ## 概念
 

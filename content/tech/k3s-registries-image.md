@@ -1,10 +1,10 @@
-+++
-title = 'k3s 镜像重写'
-date = 2024-10-31T13:25:38+08:00
-draft = false
-tags = ["k3s", "云原生"]
-categories = ["k3s"]
-+++
+---
+title: 'k3s 镜像重写'
+date: '2024-10-31T13:25:38+08:00'
+draft: false
+tags: ['k3s', '云原生']
+categories: ['k3s']
+---
 
 ## 背景
 

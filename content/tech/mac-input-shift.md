@@ -1,10 +1,10 @@
-+++
-title = 'Mac 原生输入法配置'
-date = 2024-03-22T15:19:35+08:00
-draft = false
-tags = ["mac", "输入法", "改键", "karabiner"]
-categories = ["mac"]
-+++
+---
+title: 'Mac 原生输入法配置'
+date: '2024-03-22T15:19:35+08:00'
+draft: false
+tags: ['mac', '输入法', '改键', 'karabiner']
+categories: ['mac']
+---
 
 ## 背景
 

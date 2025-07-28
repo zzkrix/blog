@@ -1,10 +1,10 @@
-+++
-title = 'CPU 模式下 comfyUI 运行 flux'
-date = 2024-08-05T22:07:13+08:00
-draft = false
-tags = ["ai", "comfyUI", "flux"]
-categories = ["ai", "comfyUI", "flux"]
-+++
+---
+title: 'CPU 模式下 comfyUI 运行 flux'
+date: '2024-08-05T22:07:13+08:00'
+draft: false
+tags: ['ai', 'comfyUI', 'flux']
+categories: ['ai', 'comfyUI', 'flux']
+---
 
 ## 下载 comfyUI
 
