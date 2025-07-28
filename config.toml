@@ -994,7 +994,7 @@ func main(){
     # 分节标题、目录标题
     fontFamilyHeadings = ""
     # 代码、上标、文章元信息、文章更新徽章、文章的 Git 版本信息、极简页脚、不蒜子站点浏览计数
-    fontFamilyCode = ""
+    fontFamilyCode = "Noto Sans Mono"
     # 引用
     fontFamilyQuote = ""
     # 文章目录
@@ -1004,10 +1004,10 @@ func main(){
     # 页脚
     fontFamilyFooter = ""
     # 主体
-    fontFamilyBody = ""
+    fontFamilyBody = "Noto Serif SC"
 
     # 网络字体链接
-    fontsLink = ""
+    fontsLink = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+Mono:wght@400;700&display=swap"
     # 说明：要想读者一定体验到你设置的字体，最好
     #      采用网络字体。MemE 主题目前仅支持
     #      Google Fonts 的链接，请前往
