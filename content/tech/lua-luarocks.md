@@ -1,5 +1,5 @@
 ---
-title: 'lua 包管理工具-luarocks'
+title: 'lua 包管理工具 luarocks'
 date: '2025-07-30T12:04:39+08:00'
 draft: false
 tags: ['lua']
@@ -40,3 +40,7 @@ luarocks install lua-cjson 2.1.0.9-1 --tree ./thirdlibs
 ```
 
 查看安装的依赖： `luarocks list --tree <save-path>`
+
+## 其他
+
+lua 依赖导出脚本： <https://github.com/zzkrix/scripts/blob/main/lua/lua-dependencies-checkout.lua>
