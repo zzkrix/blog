@@ -20,7 +20,7 @@ MacOS： `brew install luarocks`
 
 其他平台： <https://github.com/luarocks/luarocks/wiki/Download>
 
-## 常用命令
+## 使用
 
 搜索依赖：`luarocks search <package-name>`
 
