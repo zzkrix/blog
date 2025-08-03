@@ -14,21 +14,15 @@ categories: ['vim']
 
 ## 安装
 
+lazyvim 是一个集成了实用插件的 neovim 配置集。
+
+稍微配置一下就是一个好用的 IDE。
+
+前置条件 & 安装步骤：
+
+> https://www.lazyvim.org/#%EF%B8%8F-requirements
+>
 > https://www.lazyvim.org/installation
-
-```bash
-# required
-mv ~/.config/nvim{,.bak}
-
-# optional but recommended
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-
-输入 nvim 后自动下载插件，等待完成即可。
-```
 
 ## 常用快捷键
 
