@@ -52,7 +52,6 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 | `s` + 任意字符串     | 快速搜索定位，类似 vimium 的搜索    |
 | `<leader>cd`         | 在 lsp 警告提示上执行可以看完整信息 |
 | `<leader>xx`         | 可以在窗口中查看所有 lint 提示信息  |
-| `<leader>xx`         |                                     |
 | `<leader>cs`         | 显示函数/类大纲                     |
 | `<leader>n`          | 查看 notify (通知消息) 历史         |
 | `<leader>l`          | 打开 `lazy.vim` 窗口                |
