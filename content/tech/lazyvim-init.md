@@ -2,9 +2,15 @@
 title: 'lazyvim 简介'
 date: '2025-08-03T14:03:11+08:00'
 draft: false
-tags: ['']
-categories: ['']
+tags: ['vim', 'lazyvim']
+categories: ['vim']
 ---
+
+## 预览
+
+![](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-08-03-18-55-05-Azmm13.jpg)
+
+![](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-08-03-18-52-57-FJ05Cf.jpg)
 
 ## 安装
 
@@ -28,7 +34,7 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 > default `<leader>` is `<space>`
 
-#### 基本操作
+### 基本操作
 
 | 快捷键               | 描述                                |
 | -------------------- | ----------------------------------- |
@@ -53,7 +59,7 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 | `<leader>cm`         | 打开 `mason` 窗口                   |
 | `<leader>gg`         | 打开 `lazygit` 窗口                 |
 
-#### 文件管理器
+### 文件管理器
 
 | 快捷键               | 描述                          |
 | -------------------- | ----------------------------- |
@@ -68,7 +74,7 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 | `shift v` 选中后 `y` | 多选文件 / 目录               |
 | `shift h`            | 显示隐藏文件                  |
 
-#### jetbrains 对照
+### jetbrains 对照
 
 | 快捷键              | 描述                         | jetbrains 快捷键  |
 | ------------------- | ---------------------------- | ----------------- |
@@ -91,7 +97,8 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 | `<leader>sr \r`     | 执行 `replace`               | -                 |
 | `<leader>sr \s`     | 执行 `sync`，效果同`replace` | -                 |
 
-#### 其他
+### 其他
 
 自用配置： <https://github.com/zzkrix/dotfiles/tree/main/nvim>
+
 vim 快捷键： <https://www.zzkrix.com/tech/vim-shortkeys/>
