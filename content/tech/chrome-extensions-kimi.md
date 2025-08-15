@@ -1,9 +1,9 @@
 ---
-title: '浏览器插件 - kimi 历史会话清理助手'
-date: '2025-03-30T21:24:50+08:00'
+title: "浏览器插件 - kimi 历史会话清理助手"
+date: "2025-03-30T21:24:50+08:00"
 draft: false
-tags: ['chrome']
-categories: ['chrome']
+tags: ["chrome"]
+categories: ["chrome"]
 ---
 
 ## 背景
@@ -19,7 +19,7 @@ categories: ['chrome']
 - [x] 插件仅在 kimi 官方页面有效
 - [x] 能一键清除所有历史记录
 - [x] 能清除自定义时间范围内的会话记录
-  
+
 ## 实现
 
 项目目录结构如下：
@@ -28,14 +28,14 @@ categories: ['chrome']
 ├── 128.png
 ├── background.js
 ├── content.js       // 核心的处理逻辑
-├── icons            // 项目使用到的icon
+├── icons            // 项目使用到的 icon
 │   ├── 128.png
 │   ├── 16.png
 │   ├── 32.png
 │   └── 48.png
 ├── manifest.json   // 项目配置
 ├── popup.html      // 使用插件时弹出的配置页面代码
-└── popup.js        // 配置页面对应的js代码
+└── popup.js        // 配置页面对应的 js 代码
 ```
 
 其中的`manifest.json`是必需的，是整个项目的配置文件，其他文件名随意，配置文件如下：
@@ -75,30 +75,29 @@ categories: ['chrome']
 其中用户点击`清理历史会话`按钮后执行的核心代码如下：
 
 ```js
-    // 检查是否在对应的页面
-    if (!isValidKimiTab(tab)) {
-        showStatus("请在 Kimi 的历史会话页面使用此插件", "error");
-        return;
-    }
+// 检查是否在对应的页面
+if (!isValidKimiTab(tab)) {
+  showStatus("请在 Kimi 的历史会话页面使用此插件", "error");
+  return;
+}
 
-    // 获取用户配置的参数
-    const { startTime, endTime } = getTimeRange();
-    const domain = new URL(tab.url).hostname;
-    const cookies = await chrome.cookies.getAll({ domain });
+// 获取用户配置的参数
+const { startTime, endTime } = getTimeRange();
+const domain = new URL(tab.url).hostname;
+const cookies = await chrome.cookies.getAll({ domain });
 
+// 通过 chrome.tabs.sendMessage 把对应的参数传给 content.js
+const response = await chrome.tabs.sendMessage(tab.id, {
+  action: "clearAllHistory",
+  domain,
+  cookies,
+  timeRange: { startTime, endTime },
+});
 
-    // 通过 chrome.tabs.sendMessage 把对应的参数传给 content.js
-    const response = await chrome.tabs.sendMessage(tab.id, {
-        action: "clearAllHistory",
-        domain,
-        cookies,
-        timeRange: { startTime, endTime },
-    });
-
-    // 等待处理结果
-    if (response && !response.success) {
-        throw new Error(response.error || "未知错误");
-    }
+// 等待处理结果
+if (response && !response.success) {
+  throw new Error(response.error || "未知错误");
+}
 ```
 
 `content_scripts`配置项中的含义是：
@@ -110,77 +109,75 @@ categories: ['chrome']
 ```js
 // 通过 chrome.runtime.onMessage.addListener 监听来自 popup 的消息
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
-    if (message.action === "clearAllHistory") {
-        try {
-            const headers = {
-                "Content-Type": "application/json",
-            };
+  if (message.action === "clearAllHistory") {
+    try {
+      const headers = {
+        "Content-Type": "application/json",
+      };
 
-            // 如果有 cookies，添加认证信息
-            if (message.cookies && message.cookies.length > 0) {
-                const authToken = message.cookies.find(
-                    (c) => c.name === "kimi-auth"
-                );
-                if (!authToken) {
-                    throw new Error("未找到认证信息，请确保已登录");
-                }
-                headers["Authorization"] = `Bearer ${authToken.value}`;
-                headers["Cookie"] = message.cookies
-                    .map((c) => `${c.name}=${c.value}`)
-                    .join("; ");
-            }
-
-            // 循环获取所有历史记录
-            let allItems = [];
-            let offset = 0;
-            const pageSize = 50;
-
-            while (true) {
-                const response = await fetch(
-                    `https://${message.domain}/api/chat/list`,
-                    {
-                        method: "POST",
-                        headers: headers,
-                        body: JSON.stringify({
-                            kimiplus_id: "",
-                            offset: offset,
-                            q: "",
-                            size: pageSize,
-                        }),
-                    }
-                );
-
-                const data = await response.json();
-
-                if (
-                    !data.items ||
-                    !Array.isArray(data.items) ||
-                    data.items.length === 0
-                ) {
-                    break;
-                }
-
-                allItems = allItems.concat(data.items);
-                offset += pageSize;
-
-                // 添加适当的延迟，避免请求过于频繁
-                await new Promise((resolve) => setTimeout(resolve, 500));
-            }
-
-            // 执行删除操作
-            await deleteHistoryItems(
-                message.domain,
-                headers,
-                allItems,
-                message.timeRange
-            );
-            sendResponse({ success: true });
-        } catch (error) {
-            console.error("发生错误：", error);
-            sendResponse({ success: false, error: error.message });
+      // 如果有 cookies，添加认证信息
+      if (message.cookies && message.cookies.length > 0) {
+        const authToken = message.cookies.find((c) => c.name === "kimi-auth");
+        if (!authToken) {
+          throw new Error("未找到认证信息，请确保已登录");
         }
+        headers["Authorization"] = `Bearer ${authToken.value}`;
+        headers["Cookie"] = message.cookies
+          .map((c) => `${c.name}=${c.value}`)
+          .join("; ");
+      }
+
+      // 循环获取所有历史记录
+      let allItems = [];
+      let offset = 0;
+      const pageSize = 50;
+
+      while (true) {
+        const response = await fetch(
+          `https://${message.domain}/api/chat/list`,
+          {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify({
+              kimiplus_id: "",
+              offset: offset,
+              q: "",
+              size: pageSize,
+            }),
+          },
+        );
+
+        const data = await response.json();
+
+        if (
+          !data.items ||
+          !Array.isArray(data.items) ||
+          data.items.length === 0
+        ) {
+          break;
+        }
+
+        allItems = allItems.concat(data.items);
+        offset += pageSize;
+
+        // 添加适当的延迟，避免请求过于频繁
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
+
+      // 执行删除操作
+      await deleteHistoryItems(
+        message.domain,
+        headers,
+        allItems,
+        message.timeRange,
+      );
+      sendResponse({ success: true });
+    } catch (error) {
+      console.error("发生错误：", error);
+      sendResponse({ success: false, error: error.message });
     }
-    return true;
+  }
+  return true;
 });
 ```
 

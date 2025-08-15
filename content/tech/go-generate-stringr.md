@@ -132,7 +132,7 @@ import "fmt"
 type Code int
 
 const (
-    OK           Code = 1 // 正常OK
+    OK           Code = 1 // 正常 OK
     BadRequest   Code = 2 // 请求错误
     InvalidParam Code = 3
 )
@@ -161,7 +161,7 @@ func _() {
     _ = x[InvalidParam-3]
 }
 
-const _Code_name = "正常OK请求错误InvalidParam"
+const _Code_name = "正常 OK 请求错误 InvalidParam"
 
 var _Code_index = [...]uint8{0, 8, 20, 32}
 

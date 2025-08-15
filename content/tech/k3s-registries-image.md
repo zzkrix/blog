@@ -1,9 +1,9 @@
 ---
-title: 'k3s 镜像重写'
-date: '2024-10-31T13:25:38+08:00'
+title: "k3s 镜像重写"
+date: "2024-10-31T13:25:38+08:00"
 draft: false
-tags: ['k3s', '云原生']
-categories: ['k3s']
+tags: ["k3s", "云原生"]
+categories: ["k3s"]
 ---
 
 ## 背景
@@ -35,7 +35,7 @@ configs:
       ca_file: /etc/harbor/cert/ca.crt
 ```
 
-mirrors 里的"*" 表示匹配所有镜像请求，即所有容器镜像的拉取请求都会首先尝试从 <https://your-private-repo.com> 下载，如果不可用则退回到 <https://hub.docker.com>。
+mirrors 里的"\*" 表示匹配所有镜像请求，即所有容器镜像的拉取请求都会首先尝试从 <https://your-private-repo.com> 下载，如果不可用则退回到 <https://hub.docker.com>。
 
 其中 mirrors 可以配置多项：
 
@@ -51,7 +51,6 @@ mirrors:
     endpoint:
       - "https://your-private-repo.com"
       - "https://hub.docker.com"
-...
 ```
 
 ## 参考资料

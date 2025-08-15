@@ -1,9 +1,9 @@
 ---
-title: '浏览器跨域请求机制'
-date: '2025-02-11T14:27:28+08:00'
+title: "浏览器跨域请求机制"
+date: "2025-02-11T14:27:28+08:00"
 draft: false
-tags: ['web']
-categories: ['web']
+tags: ["web"]
+categories: ["web"]
 ---
 
 ![2025-02-11-17-16-XR4S9O](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-11-17-16-XR4S9O.png)
@@ -32,6 +32,7 @@ JSONP（已逐渐被淘汰） ：这是一种早期的跨域解决方案。它�
 ## 测试代码
 
 后端 server1.go:
+
 > go run server1.go
 
 ```golang
@@ -98,6 +99,7 @@ func main() {
 ```
 
 后端 server2.go:
+
 > go run server2.go
 
 ```golang
@@ -164,54 +166,56 @@ func main() {
 ```
 
 前端 index.html：
+
 > python3 -m http.server
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CORS Example</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>CORS Example</h1>
     <button id="fetchData">Fetch Data</button>
     <div id="result"></div>
 
     <script>
-        document.getElementById('fetchData').addEventListener('click', async () => {
-            try {
-                // 请求服务端 1 简单请求
-                const response1 = await fetch('http://localhost:8081/data', {
-                    method: 'GET',
-                    headers: {
-                    },
-                });
-                const data1 = await response1.json();
-                console.log('Response from Server 1:', data1);
+      document
+        .getElementById("fetchData")
+        .addEventListener("click", async () => {
+          try {
+            // 请求服务端 1 简单请求
+            const response1 = await fetch("http://localhost:8081/data", {
+              method: "GET",
+              headers: {},
+            });
+            const data1 = await response1.json();
+            console.log("Response from Server 1:", data1);
 
-                // 请求服务端 2 非简单请求
-                const response2 = await fetch('http://localhost:8082/data', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
-                const data2 = await response2.json();
-                console.log('Response from Server 2:', data2);
+            // 请求服务端 2 非简单请求
+            const response2 = await fetch("http://localhost:8082/data", {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
+            const data2 = await response2.json();
+            console.log("Response from Server 2:", data2);
 
-                // 显示结果
-                document.getElementById('result').innerHTML = `
+            // 显示结果
+            document.getElementById("result").innerHTML = `
                     <p>Server 1: ${data1.message}</p>
                     <p>Server 2: ${data2.message}</p>
                 `;
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
+          } catch (error) {
+            console.error("Error fetching data:", error);
+          }
         });
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -238,7 +242,7 @@ func main() {
   - Content-Language
   - Content-Type（值仅限于 application/x-www-form-urlencoded、multipart/form-data 或 text/plain）。
 - 请求体：如果是 POST 请求，请求体必须符合上述 Content-Type 的限制。
-  
+
 在这种情况下，浏览器会直接发送请求到服务器，并在请求头中添加 Origin 字段，表示请求的来源。服务器需要在响应头中设置 Access-Control-Allow-Origin 字段，以允许跨域访问
 
 ## 预检请求（Preflight Request）
@@ -248,7 +252,7 @@ func main() {
 - 请求方法：PUT、DELETE、PATCH 等非简单方法。
 - 请求头：包含自定义头（如 X-Custom-Header）或非标准头。
 - 请求体：包含复杂的请求体（如 JSON 数据）。
-  
+
 在这种情况下，浏览器会先发送一个 OPTIONS 请求，询问服务器是否允许跨域访问。服务器需要在响应头中设置以下字段：
 
 - Access-Control-Allow-Origin：允许访问的源。
@@ -256,7 +260,7 @@ func main() {
 - Access-Control-Allow-Headers：允许的请求头。
 - Access-Control-Allow-Credentials：是否允许携带凭据（如 Cookies）。
 - Access-Control-Max-Age：预检请求的结果可以被缓存的时间。
-  
+
 如果服务器允许跨域访问，浏览器会继续发送实际请求；否则，浏览器会阻止请求并抛出 CORS 错误。
 
 需要注意的是，浏览器会缓存 OPTIONS 请求结果，所以抓包时可以看到，非简单请求不会每次都发送 OPTIONS。

@@ -1,9 +1,9 @@
 ---
-title: 'TypeScript - 函数重载'
-date: '2025-02-08T16:18:57+08:00'
+title: "TypeScript - 函数重载"
+date: "2025-02-08T16:18:57+08:00"
 draft: false
-tags: ['TypeScript']
-categories: ['TypeScript']
+tags: ["TypeScript"]
+categories: ["TypeScript"]
 ---
 
 ## 函数重载（Function Overloading）
@@ -23,16 +23,16 @@ function func(param: string): string;
 
 // 2. 实现函数逻辑（必须兼容所有签名）
 function func(param: number | string): number | string {
-    if (typeof param === "number") {
-        return param + 1;
-    } else {
-        return param + "1";
-    }
+  if (typeof param === "number") {
+    return param + 1;
+  } else {
+    return param + "1";
+  }
 }
 
 // 3. 调用函数
-console.log(func(1));      // 输出 2
-console.log(func("hello"));// 输出 "hello1"
+console.log(func(1)); // 输出 2
+console.log(func("hello")); // 输出 "hello1"
 ```
 
 **关键点：**
@@ -47,11 +47,11 @@ console.log(func("hello"));// 输出 "hello1"
 
 ```typescript
 function func(param: number | string): number | string {
-    if (typeof param === "number") {
-        return param + 1;
-    } else {
-        return param + "1";
-    }
+  if (typeof param === "number") {
+    return param + 1;
+  } else {
+    return param + "1";
+  }
 }
 ```
 
@@ -69,11 +69,11 @@ function sum(a: number, b: number): number;
 function sum(a: number, b: number, c: number): number;
 
 function sum(a: number, b: number, c?: number): number {
-    return a + b + (c ?? 0);
+  return a + b + (c ?? 0);
 }
 
-console.log(sum(1, 2));      // 3
-console.log(sum(1, 2, 3));   // 6
+console.log(sum(1, 2)); // 3
+console.log(sum(1, 2, 3)); // 6
 ```
 
 **解释：**
@@ -89,11 +89,11 @@ function getValue(param: number): number;
 function getValue(param: string): string;
 
 function getValue(param: number | string): number | string {
-    return typeof param === "number" ? param * 2 : param.toUpperCase();
+  return typeof param === "number" ? param * 2 : param.toUpperCase();
 }
 
-console.log(getValue(10));     // 20
-console.log(getValue("hello"));// "HELLO"
+console.log(getValue(10)); // 20
+console.log(getValue("hello")); // "HELLO"
 ```
 
 **解释：**
@@ -110,11 +110,11 @@ console.log(getValue("hello"));// "HELLO"
 
 ## 总结
 
-| **特点** | **说明** |
-|----------|----------|
-| **定义多个签名** | 先定义多个函数签名，最后实现一个通用函数 |
-| **参数不同** | 允许相同函数名有不同参数类型或数量 |
-| **返回值更精确** | 根据参数类型，返回不同的类型 |
-| **提升代码可读性** | 让 API 更清晰，调用时不会混淆返回值 |
+| **特点**           | **说明**                                 |
+| ------------------ | ---------------------------------------- |
+| **定义多个签名**   | 先定义多个函数签名，最后实现一个通用函数 |
+| **参数不同**       | 允许相同函数名有不同参数类型或数量       |
+| **返回值更精确**   | 根据参数类型，返回不同的类型             |
+| **提升代码可读性** | 让 API 更清晰，调用时不会混淆返回值      |
 
 在 TypeScript 中，**如果一个函数的参数类型或数量可能会变化，函数重载是一个很好的选择**。

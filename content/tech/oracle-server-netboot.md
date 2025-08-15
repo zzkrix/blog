@@ -34,7 +34,7 @@ wget https://boot.netboot.xyz/ipxe/netboot.xyz-arm64.efi
 
 ## 启动 cloud shell 连接
 
-在实例详情里选择 `控制台连接` -- `启动Cloud Shell连接`
+在实例详情里选择 `控制台连接` -- `启动 Cloud Shell 连接`
 等待显示`For more information about troubleshooting ...`即可。
 ![](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/image-20231207140247071.png)
 

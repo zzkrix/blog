@@ -1,14 +1,14 @@
 ---
-title: '使用 hugo+github 部署静态博客'
-date: '2024-01-21T00:23:12+08:00'
+title: "使用 hugo+github 部署静态博客"
+date: "2024-01-21T00:23:12+08:00"
 draft: false
-tags: ['blog', 'github', 'hugo']
-categories: ['blog']
+tags: ["blog", "github", "hugo"]
+categories: ["blog"]
 ---
 
 ## 前言
 
-介绍如何创建一个自动构建的静态网站，并且将博客源文件 (markdown、主题配置等) 与 public 静态目标文件分开存放。
+介绍如何创建一个自动构建的静态网站，并且将博客源文件 （markdown、主题配置等） 与 public 静态目标文件分开存放。
 
 ## Hugo
 
@@ -23,7 +23,7 @@ CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
 基本使用：
 
 ```bash
-# 初始化一个hugo项目
+# 初始化一个 hugo 项目
 $ hugo new site myblog && cd myblog
 
 # 下载主题
@@ -31,18 +31,18 @@ $ git init && git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-
 
 # ... 参照 https://github.com/reuixiy/hugo-theme-meme 进行配置
 
-# 生成静态网站文件(public文件夹)
+# 生成静态网站文件（public 文件夹）
 $ hugo
 
 或者
 
-# 启动一个本地的web服务，可用浏览器访问 http://localhost:1313 查看效果
+# 启动一个本地的 web 服务，可用浏览器访问 http://localhost:1313 查看效果
 $ hugo server
 ```
 
 ## Github
 
-为了能使用 [github pages](https://pages.github.com/)，需要创建一个`公开仓库`，用来存放编译好的静态文件，仓库名必须为`<username>.github.io` ，`username`是你的`github账户名`，后面会通过`github actions`自动将私有仓库生成的网站内容推送到该仓库，但在自动化之前，需要先有一个对该仓库有读写权限的 token。
+为了能使用 [github pages](https://pages.github.com/)，需要创建一个`公开仓库`，用来存放编译好的静态文件，仓库名必须为`<username>.github.io` ，`username`是你的`github 账户名`，后面会通过`github actions`自动将私有仓库生成的网站内容推送到该仓库，但在自动化之前，需要先有一个对该仓库有读写权限的 token。
 
 访问 [https://github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new) 将创建后得到的 token 保存备用，具体配置见下图：
 
@@ -68,40 +68,40 @@ $ hugo server
 name: deploy
 
 on:
-    push:
-    workflow_dispatch:
-    # schedule:
-        # Runs everyday at 8:00 AM
-        # - cron: "0 0 * * *"
+  push:
+  workflow_dispatch:
+  # schedule:
+  # Runs everyday at 8:00 AM
+  # - cron: "0 0 * * *"
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
-              with:
-                  submodules: true
-                  fetch-depth: 0
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
 
-            - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v2
-              with:
-                  hugo-version: "latest"
-                  extended: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
 
-            - name: Build Web
-              run: hugo
+      - name: Build Web
+        run: hugo
 
-            - name: Deploy Web
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-                  EXTERNAL_REPOSITORY: <username>/<username>.github.io
-                  PUBLISH_BRANCH: main
-                  PUBLISH_DIR: ./public
-                  commit_message: ${{ github.event.head_commit.message }}
-                  cname: www.YOUR_DOMAIN.com
+      - name: Deploy Web
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          EXTERNAL_REPOSITORY: <username>/<username>.github.io
+          PUBLISH_BRANCH: main
+          PUBLISH_DIR: ./public
+          commit_message: ${{ github.event.head_commit.message }}
+          cname: www.YOUR_DOMAIN.com
 ```
 
 在`myblog`里新建文件`.gitignore`内容如下：

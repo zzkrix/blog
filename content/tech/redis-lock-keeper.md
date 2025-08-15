@@ -123,8 +123,8 @@ func (l *DistributedLock) Release() (err error) {
 
         script := redis.NewScript(1, `
         if redis.call("GET", KEYS[1]) == ARGV[1] then
-            return redis.call("DEL", KEYS[1]) 
-        else 
+            return redis.call("DEL", KEYS[1])
+        else
             return 0
         end`)
         _, err = script.Do(conn, l.key, l.value)

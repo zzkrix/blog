@@ -1,9 +1,9 @@
 ---
-title: 'Python 语法糖'
-date: '2024-01-21T22:46:01+08:00'
+title: "Python 语法糖"
+date: "2024-01-21T22:46:01+08:00"
 draft: false
-tags: ['python']
-categories: ['python']
+tags: ["python"]
+categories: ["python"]
 ---
 
 ## 前言

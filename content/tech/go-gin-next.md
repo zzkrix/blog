@@ -1,45 +1,45 @@
 ---
-title: 'Gin 框架中的 c.Next 的作用'
-date: '2025-07-10T16:17:27+08:00'
+title: "Gin 框架中的 c.Next 的作用"
+date: "2025-07-10T16:17:27+08:00"
 draft: false
-tags: ['Golang', 'gin']
-categories: ['Golang']
+tags: ["Golang", "gin"]
+categories: ["Golang"]
 ---
 
 ```go
-package main  
-  
-import (  
-   "fmt"  
+package main
+
+import (
+   "fmt"
    "net/http"
-   
+
    "github.com/gin-gonic/gin"
-)  
-  
-func main() {  
-   r := gin.New()  
-  
-   r.Use(func(c *gin.Context) {  
-      fmt.Println("in mid1")  
-      
+)
+
+func main() {
+   r := gin.New()
+
+   r.Use(func(c *gin.Context) {
+      fmt.Println("in mid1")
+
       // 执行下一个中间件，并返回到当前函数
-      c.Next() 
-      
+      c.Next()
+
       // 该行代码会在 next 之后继续执行
-      fmt.Println("haha") 
-   })  
-  
-   r.Use(func(c *gin.Context) {  
-      fmt.Println("in mid2")  
-   })  
-  
-   r.GET("/hello", func(c *gin.Context) {  
-      c.JSON(http.StatusOK, gin.H{  
-         "message": "ok",  
-      })  
-   })  
-  
-   r.Run(":8080")  
+      fmt.Println("haha")
+   })
+
+   r.Use(func(c *gin.Context) {
+      fmt.Println("in mid2")
+   })
+
+   r.GET("/hello", func(c *gin.Context) {
+      c.JSON(http.StatusOK, gin.H{
+         "message": "ok",
+      })
+   })
+
+   r.Run(":8080")
 }
 ```
 
@@ -54,14 +54,14 @@ haha
 c.Next 的实现：
 
 ```go
-// Next should be used only inside middleware.// It executes the pending handlers in the chain inside the calling handler.  
-// See example in GitHub.  
-func (c *Context) Next() {  
-   c.index++  
-   for c.index < int8(len(c.handlers)) {  
-      c.handlers[c.index](c)  
-      c.index++  
-   }  
+// Next should be used only inside middleware.// It executes the pending handlers in the chain inside the calling handler.
+// See example in GitHub.
+func (c *Context) Next() {
+   c.index++
+   for c.index < int8(len(c.handlers)) {
+      c.handlers[c.index](c)
+      c.index++
+   }
 }
 ```
 

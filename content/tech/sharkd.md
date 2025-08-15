@@ -1,11 +1,10 @@
 ---
-title: 'wireshark 之 sharkd 使用'
-date: '2024-08-26T17:04:45+08:00'
+title: "wireshark 之 sharkd 使用"
+date: "2024-08-26T17:04:45+08:00"
 draft: false
-tags: ['sharkd']
-categories: ['sharkd']
+tags: ["sharkd"]
+categories: ["sharkd"]
 ---
-
 
 ## 介绍
 
@@ -27,7 +26,7 @@ git clone --depth=1 https://github.com/wireshark/wireshark
 
 cd wireshark
 
-# debian 系使用这个，其他平台在tools目录下找对应的文件即可
+# debian 系使用这个，其他平台在 tools 目录下找对应的文件即可
 tools/debian-setup.sh
 
 mkdir build
@@ -79,7 +78,7 @@ s.close()
 让 sharkd 加载抓包文件，向 sharkd 接口发送以下内容：
 
 ```json
-{"jsonrpc":"2.0","id":1, "method": "load", "file": "/tmp/test.pcap"}
+{ "jsonrpc": "2.0", "id": 1, "method": "load", "file": "/tmp/test.pcap" }
 ```
 
 > 对 sharkd 来说，文件是一次性加载的，如果加载后文件发生变化，sharkd 并不会动态更新，所以需要开发人员给 sharkd 发送上述指令重新加载。

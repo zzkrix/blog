@@ -1,9 +1,9 @@
 ---
-title: 'lazyvim 简介'
-date: '2025-08-03T14:03:11+08:00'
+title: "lazyvim 简介"
+date: "2025-08-03T14:03:11+08:00"
 draft: false
-tags: ['vim', 'lazyvim']
-categories: ['vim']
+tags: ["vim", "lazyvim"]
+categories: ["vim"]
 ---
 
 ## 预览
@@ -20,9 +20,9 @@ lazyvim 是一个集成了实用插件的 neovim 配置集。
 
 前置条件 & 安装步骤：
 
-> https://www.lazyvim.org/#%EF%B8%8F-requirements
+> <https://www.lazyvim.org/#%EF%B8%8F-requirements>
 >
-> https://www.lazyvim.org/installation
+> <https://www.lazyvim.org/installation>
 
 ## 常用快捷键
 
@@ -36,7 +36,7 @@ lazyvim 是一个集成了实用插件的 neovim 配置集。
 | `<leader>ff`         | 同上                                |
 | `<leader>fb`         | 搜索`buffer`                        |
 | `<leader>ft`         | 打开`terminal`                      |
-| `ctrl /`             | `打开 ` / `隐藏` `terminal`         |
+| `ctrl /`             | `打开` / `隐藏` `terminal`          |
 | `ctrl ww`            | 焦点在各窗口之间切换                |
 | `ctrl w` + `h/j/k/l` | 焦点移动到 ⬅️/⬇️/⬆️/➡️ 侧窗口       |
 | `shift h`            | 移动到 ⬅️ 侧 buffer 标签            |
@@ -47,25 +47,25 @@ lazyvim 是一个集成了实用插件的 neovim 配置集。
 | `<leader>cd`         | 在 lsp 警告提示上执行可以看完整信息 |
 | `<leader>xx`         | 可以在窗口中查看所有 lint 提示信息  |
 | `<leader>cs`         | 显示函数/类大纲                     |
-| `<leader>n`          | 查看 notify (通知消息) 历史         |
+| `<leader>n`          | 查看 notify （通知消息） 历史       |
 | `<leader>l`          | 打开 `lazy.vim` 窗口                |
 | `<leader>cm`         | 打开 `mason` 窗口                   |
 | `<leader>gg`         | 打开 `lazygit` 窗口                 |
 
 ### 文件管理器
 
-| 快捷键               | 描述                          |
-| -------------------- | ----------------------------- |
-| `<leader>e`          | 打开或关闭文件管理器          |
-| `Esc`                | 隐藏文件管理器                |
-| `shift h`            | 控制隐藏文件显示              |
-| `a`                  | `add`新建文件或文件夹 (/结尾) |
-| `c`                  | `copy` 文件                   |
-| `m`                  | `move` 文件 / 重命名          |
-| `r`                  | `rename`重命名文件            |
-| `d`                  | `delete` 删除文件 / 目录      |
-| `shift v` 选中后 `y` | 多选文件 / 目录               |
-| `shift h`            | 显示隐藏文件                  |
+| 快捷键               | 描述                            |
+| -------------------- | ------------------------------- |
+| `<leader>e`          | 打开或关闭文件管理器            |
+| `Esc`                | 隐藏文件管理器                  |
+| `shift h`            | 控制隐藏文件显示                |
+| `a`                  | `add`新建文件或文件夹 （/结尾） |
+| `c`                  | `copy` 文件                     |
+| `m`                  | `move` 文件 / 重命名            |
+| `r`                  | `rename`重命名文件              |
+| `d`                  | `delete` 删除文件 / 目录        |
+| `shift v` 选中后 `y` | 多选文件 / 目录                 |
+| `shift h`            | 显示隐藏文件                    |
 
 ### jetbrains 对照
 
@@ -79,8 +79,8 @@ lazyvim 是一个集成了实用插件的 neovim 配置集。
 | `<leader>cr`        | 变量名重构                   | `shift f6`        |
 | `zM`                | 折叠所有函数体               | `cmd shift -`     |
 | `zR`                | 展开所有函数体               | `cmd shift +`     |
-| `za`                | 折叠/打开当前函数体          | `cmd - `          |
-| `zo`                | 展开当前函数体               | `cmd + `          |
+| `za`                | 折叠/打开当前函数体          | `cmd -`           |
+| `zo`                | 展开当前函数体               | `cmd +`           |
 | `zc`                | 折叠当前函数体               | -                 |
 | `gc`                | `多行` 注释/取消注释         | `cmd /`           |
 | `gcc`               | `单行` 注释/取消注释         | `cmd /`           |

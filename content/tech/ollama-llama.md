@@ -1,9 +1,9 @@
 ---
-title: '本地部署大模型'
-date: '2024-07-25T16:10:28+08:00'
+title: "本地部署大模型"
+date: "2024-07-25T16:10:28+08:00"
 draft: false
-tags: ['ai']
-categories: ['ai']
+tags: ["ai"]
+categories: ["ai"]
 ---
 
 ## 部署 ollama
@@ -31,7 +31,7 @@ docker exec -it ollama ollama run qwen2:0.5b
 有很多开源的 UI 库允许你从浏览器访问模型，这里以 [Open WebUI](https://openwebui.com/) 为例，更多工具请参考：<https://github.com/ollama/ollama/tree/main?tab=readme-ov-file#web--desktop>
 
 ```bash
-# OLLAMA_BASE_URL替换成你机器的IP地址，例如： OLLAMA_BASE_URL=http://192.168.1.110:11434
+# OLLAMA_BASE_URL 替换成你机器的 IP 地址，例如： OLLAMA_BASE_URL=http://192.168.1.110:11434
 docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v ./open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
@@ -59,7 +59,7 @@ After=network-online.target
 # 修改模型存储路径， 默认为 /usr/share/ollama/.ollama
 Environment="OLLAMA_MODELS=/data/ollama"
 
-# ollama监听地址，默认为 127.0.0.1
+# ollama 监听地址，默认为 127.0.0.1
 Environment="OLLAMA_HOST=0.0.0.0"
 
 ExecStart=/usr/bin/ollama serve

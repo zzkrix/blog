@@ -1,9 +1,9 @@
 ---
-title: 'Mac 原生输入法配置'
-date: '2024-03-22T15:19:35+08:00'
+title: "Mac 原生输入法配置"
+date: "2024-03-22T15:19:35+08:00"
 draft: false
-tags: ['mac', '输入法', '改键', 'karabiner']
-categories: ['mac']
+tags: ["mac", "输入法", "改键", "karabiner"]
+categories: ["mac"]
 ---
 
 ## 背景
@@ -28,66 +28,64 @@ Mac 原生的中英文切换是 Caps Lock 键。
 
 ```json
 {
-    "description": "Use left_shift to switch input sources",
-    "manipulators": [
+  "description": "Use left_shift to switch input sources",
+  "manipulators": [
+    {
+      "conditions": [
         {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com\\.teamviewer\\.TeamViewer$",
-                        "^com\\.vmware\\.horizon$",
-                        "^com\\.vmware\\.fusion$",
-                        "^com\\.vmware\\.view$",
-                        "^com\\.parallels\\.desktop$",
-                        "^com\\.parallels\\.vm$",
-                        "^com\\.parallels\\.desktop\\.console$",
-                        "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                        "^com\\.citrix\\.XenAppViewer$",
-                        "^com\\.vmware\\.proxyApp\\.",
-                        "^com\\.parallels\\.winapp\\."
-                    ],
-                    "type": "frontmost_application_unless"
-                }
-            ],
-            "from": {
-                "key_code": "left_shift",
-                "modifiers": {
-                    "optional": [
-                        "caps_lock"
-                    ]
-                }
-            },
-            "parameters": {
-                "basic.to_if_alone_timeout_milliseconds": 200,
-                "basic.to_if_held_down_threshold_milliseconds": 200
-            },
-            "to": [
-                {
-                    "key_code": "left_shift",
-                    "lazy": true
-                }
-            ],
-            "to_if_alone": [
-                {
-                    "key_code": "spacebar",
-                    "modifiers": "control"
-                }
-            ],
-            "to_if_held_down": [
-                {
-                    "key_code": "left_shift"
-                }
-            ],
-            "type": "basic"
+          "bundle_identifiers": [
+            "^com\\.teamviewer\\.TeamViewer$",
+            "^com\\.vmware\\.horizon$",
+            "^com\\.vmware\\.fusion$",
+            "^com\\.vmware\\.view$",
+            "^com\\.parallels\\.desktop$",
+            "^com\\.parallels\\.vm$",
+            "^com\\.parallels\\.desktop\\.console$",
+            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+            "^com\\.citrix\\.XenAppViewer$",
+            "^com\\.vmware\\.proxyApp\\.",
+            "^com\\.parallels\\.winapp\\."
+          ],
+          "type": "frontmost_application_unless"
         }
-    ]
+      ],
+      "from": {
+        "key_code": "left_shift",
+        "modifiers": {
+          "optional": ["caps_lock"]
+        }
+      },
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 200,
+        "basic.to_if_held_down_threshold_milliseconds": 200
+      },
+      "to": [
+        {
+          "key_code": "left_shift",
+          "lazy": true
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "spacebar",
+          "modifiers": "control"
+        }
+      ],
+      "to_if_held_down": [
+        {
+          "key_code": "left_shift"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
 }
 ```
 
 然后在下图设置处，使其对自带键盘生效：
 ![2024-03-22-15-22-DLzJf4](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-03-22-15-22-DLzJf4.png)
 
-嗯。。。舒服了～
+嗯······舒服了～
 
 ![2024-03-22-16-35-EOfzwf](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-03-22-16-35-EOfzwf.gif)
 

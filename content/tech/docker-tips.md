@@ -68,7 +68,7 @@ $ docker image ls -f label=com.example.version=0.1
 无主的数据卷可能会占据很多空间，要清理请使用以下命令：
 
 ```bash
-$ docker volume prune
+docker volume prune
 ```
 
 ## 参考资料

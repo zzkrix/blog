@@ -1,9 +1,9 @@
 ---
-title: 'Mac 下使用 iterm2 配置 ssh'
-date: '2024-01-21T22:24:12+08:00'
+title: "Mac 下使用 iterm2 配置 ssh"
+date: "2024-01-21T22:24:12+08:00"
 draft: false
-tags: ['iterm2', 'mac', 'ssh']
-categories: ['mac']
+tags: ["iterm2", "mac", "ssh"]
+categories: ["mac"]
 ---
 
 ## 前言
@@ -14,14 +14,14 @@ categories: ['mac']
 
 目前网上介绍最多的是以下两种方式实现的自动登录：
 
-- `shell脚本 + expect + iterm2触发器`
-- `shell脚本 + sshpass`
+- `shell 脚本 + expect + iterm2 触发器`
+- `shell 脚本 + sshpass`
 
 这两种方式都显得很蹩脚，还得用 shell 脚本。
 而且密码还明文暴露在 shell 脚本里。
 对密码和 shell 不敏感的小伙伴自己去搜下怎么实现的吧，此处不推荐。
 
-这里介绍的方式是`纯使用iterm2`实现，可以做到不暴露明文密码，配置非常简单，像使用 xshell 一样丝滑。
+这里介绍的方式是`纯使用 iterm2`实现，可以做到不暴露明文密码，配置非常简单，像使用 xshell 一样丝滑。
 
 ## 演示
 
@@ -58,7 +58,7 @@ categories: ['mac']
 >
 > 第三列是定位到密码管理器里面的哪个密码配置
 >
-> 后面两列不知道什么意思。。。都选上了
+> 后面两列不知道什么意思······都选上了
 
 ![2024-01-21-22-53-Trm8Tx](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-01-21-22-53-Trm8Tx.jpg)
 
@@ -73,7 +73,7 @@ Host *
     ControlPath ~/.ssh/%r@%h:%p.socket
 
     ControlPersist yes
-    ServerAliveInterval 10 # 每隔10s发一次心跳
+    ServerAliveInterval 10 # 每隔 10s 发一次心跳
     ServerAliveCountMax 3  # 三次心跳没响应则关闭连接
 ```
 

@@ -17,9 +17,9 @@ series: []
 > xfs 文件系统使用 `xfs_growfs`
 
 ```bash
-$ lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 
-$ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
 
 ![](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/image-20231207153606709.png)

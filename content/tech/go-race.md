@@ -16,7 +16,7 @@ series: []
 # 编译出带检测的程序
 $go build -race
 
-# 跑test时带检测功能
+# 跑 test 时带检测功能
 $go test -race
 
 # 直接允许也可以添加

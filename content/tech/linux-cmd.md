@@ -8,7 +8,6 @@ categories: ["linux"]
 series: []
 ---
 
-
 ## awk
 
 awk 指定多个分隔符 `awk -F '[;:]'`（使用`;`或`:`进行分割）
@@ -43,7 +42,7 @@ awk '{print $NF}'
 ```
 # xargs -t # 在执行前先打印处要执行的命令
 # xargs -I {} # 设置一个符号{}表示管道前面的某一行输出内容，以便后续复杂命令进行替换
-# xargs -P `nproc` # 并发数，默认为1，如果置0表示让xargs使用尽可能多的并发数，这里`nproc`是cpu核数
+# xargs -P `nproc` # 并发数，默认为 1，如果置 0 表示让 xargs 使用尽可能多的并发数，这里`nproc`是 cpu 核数
 
 docker ps -q | xargs -t -I {} docker exec {} sh -c "find /sys -name iflink | xargs grep -w 14"
 
@@ -80,7 +79,7 @@ docker ps -q | xargs -t -I {} docker exec {} sh -c "find /sys -name iflink | xar
 -c  # 某进程打开的文件
 -p  # 某进程号打开的文件
 -r  # 重复执行时间间隔，单位秒
--n  # 将出现的主机名转换成IP显示
+-n  # 将出现的主机名转换成 IP 显示
 ```
 
 `lsof -i tcp`
@@ -100,13 +99,13 @@ docker ps -q | xargs -t -I {} docker exec {} sh -c "find /sys -name iflink | xar
 自动重定向：
 
 ```bash
-curl qq.com -L 
+curl qq.com -L
 ```
 
 只显示请求头：
 
 ```bash
-curl qq.com -I 
+curl qq.com -I
 ```
 
 添加请求头：

@@ -1,9 +1,9 @@
 ---
-title: 'JS 学习 - 函数立即执行'
-date: '2025-04-10T21:41:42+08:00'
+title: "JS 学习 - 函数立即执行"
+date: "2025-04-10T21:41:42+08:00"
 draft: false
-tags: ['JavaScript']
-categories: ['JavaScript']
+tags: ["JavaScript"]
+categories: ["JavaScript"]
 ---
 
 > 学习前端中，不停的遇到新姿势，充满“惊喜”🤷。
@@ -14,10 +14,10 @@ categories: ['JavaScript']
 
 ```javascript
 function f(v) {
-    console.log(v);
+  console.log(v);
 }
 
-f('aaa');
+f("aaa");
 ```
 
 - 特点：函数定义和调用是分开的，函数可以在定义后多次调用。
@@ -32,8 +32,8 @@ f('aaa');
 
 ```javascript
 ((v) => {
-    console.log(v);
-})('ccc');
+  console.log(v);
+})("ccc");
 ```
 
 - 解释：这是一个使用箭头函数的立即执行函数表达式（IIFE）。
@@ -48,8 +48,8 @@ f('aaa');
 
 ```javascript
 (function f(v) {
-    console.log(v);
-})('bbb');
+  console.log(v);
+})("bbb");
 ```
 
 - 解释：这是一个立即执行的函数表达式（Immediately Invoked Function Expression, IIFE）。函数定义后立即执行。

@@ -1,11 +1,10 @@
 ---
-title: 'HTTP Cookie 笔记'
-date: '2025-02-13T09:37:57+08:00'
+title: "HTTP Cookie 笔记"
+date: "2025-02-13T09:37:57+08:00"
 draft: false
-tags: ['web']
-categories: ['web']
+tags: ["web"]
+categories: ["web"]
 ---
-
 
 ## 简介
 
@@ -88,7 +87,7 @@ cookie := &http.Cookie{
 - Value：abc123，存储了会话的唯一标识符。
 - Path：/，表示这个 Cookie 在域名的所有路径下都有效。
 - Domain：.example.com，表示这个 Cookie 在 example.com 及其子域名下有效，`Domain 参数必须以点 (“.”) 开始`。
-- Expires：time.Now().Add(1 * time.Hour)，表示这个 Cookie 在 1 小时后过期。
+- Expires：time.Now().Add(1 \* time.Hour)，表示这个 Cookie 在 1 小时后过期。
 - MaxAge：3600，单位：秒，表示这个 Cookie 的最大生存时间为 1 小时。
 - Secure：true，表示未使用 HTTPS 发起请求的话，浏览器不会在请求中携带 Cookie，localhost/127.0.0.1 除外。
 - HttpOnly：true，表示这个 Cookie 无法被客户端 js 脚本访问，只能被浏览器访问。

@@ -13,9 +13,9 @@ series: []
 ```bash
 -c 次数
 -p 目标端口
--a 源IP
+-a 源 IP
 -s 源端口
--S 攻击类型是Syn flood
+-S 攻击类型是 Syn flood
 
 hping3 192.168.190.1 -c 1 -p 6106 -S -a 172.22.0.27 -s 31399
 ```

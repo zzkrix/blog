@@ -1,11 +1,10 @@
 ---
-title: 'Conda 安装和使用'
-date: '2024-08-30T14:23:24+08:00'
+title: "Conda 安装和使用"
+date: "2024-08-30T14:23:24+08:00"
 draft: false
-tags: ['python', 'conda']
-categories: ['python', 'conda']
+tags: ["python", "conda"]
+categories: ["python", "conda"]
 ---
-
 
 ## 介绍
 
@@ -48,7 +47,7 @@ rm ~/miniconda3/miniconda.sh
 或
 ~/miniconda3/bin/conda init fish
 或
-~/miniconda3/bin/conda init <其他>
+~/miniconda3/bin/conda init 《其他》
 ```
 
 默认情况下，每次进入终端，都会打开一个名为`base`的 conda 环境，一点用都没有。
@@ -166,7 +165,7 @@ conda create --name go1.21 go=1.21
 
 个人觉得第一点是比较好的，确实某些时候有这个需要。
 
-至于第二点，嗯。。。反正我没这个需求。
+至于第二点，嗯······反正我没这个需求。
 
 ### 商用风险
 

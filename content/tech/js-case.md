@@ -1,9 +1,9 @@
 ---
-title: 'JS 学习 - 细碎知识点'
-date: '2025-04-15T14:21:03+08:00'
+title: "JS 学习 - 细碎知识点"
+date: "2025-04-15T14:21:03+08:00"
 draft: false
-tags: ['JavaScript']
-categories: ['JavaScript']
+tags: ["JavaScript"]
+categories: ["JavaScript"]
 ---
 
 ## 参考资料
@@ -18,7 +18,7 @@ categories: ['JavaScript']
 
 以下都是合法的标识符：
 
-```js
+```text
 abc
 abc123
 abc_
@@ -34,18 +34,18 @@ abc$
 ```js
 // $ 作为变量名
 {
-    var $ = '我是变量';
+  var $ = "我是变量";
 
-    console.log($);
+  console.log($);
 }
 
 // $作为函数名
 {
-    function $() {
-        console.log('离谱~');
-    }
+  function $() {
+    console.log("离谱~");
+  }
 
-    $();
+  $();
 }
 ```
 
@@ -99,8 +99,8 @@ a is 1
 语法结构如下：
 
 ```js
-标签名:{
-    // 代码块
+标签名：{
+  // 代码块
 }
 ```
 
@@ -133,8 +133,8 @@ top: {
 语法结构：
 
 ```js
-with (对象) {
-    语句
+with （对象） {
+  语句；
 }
 ```
 
@@ -163,7 +163,7 @@ obj.k2 = 'v22';
 var obj = {};
 
 with (obj) {
-    p1 = 123;
+  p1 = 123;
 }
 
 console.log(obj.p1); // undefined

@@ -1,9 +1,9 @@
 ---
-title: 'lua 包管理工具 luarocks'
-date: '2025-07-30T12:04:39+08:00'
+title: "lua 包管理工具 luarocks"
+date: "2025-07-30T12:04:39+08:00"
 draft: false
-tags: ['lua']
-categories: ['lua']
+tags: ["lua"]
+categories: ["lua"]
 ---
 
 ## 介绍
@@ -34,7 +34,7 @@ luarocks install lua-cjson --tree ./thirdlibs
 
 # 不加版本号默认安装最新版本
 # 如果指定版本号，会将其他版本删除
-# 即luarocks只能保存某个包的某一个版本
+# 即 luarocks 只能保存某个包的某一个版本
 
 luarocks install lua-cjson 2.1.0.9-1 --tree ./thirdlibs
 ```

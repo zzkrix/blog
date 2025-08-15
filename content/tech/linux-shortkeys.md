@@ -1,11 +1,10 @@
 ---
-title: 'Linux & iterm2 常用快捷键'
-date: '2024-04-02T17:53:53+08:00'
+title: "Linux & iterm2 常用快捷键"
+date: "2024-04-02T17:53:53+08:00"
 draft: false
-tags: ['linux', 'mac', 'iterm2']
-categories: ['linux']
+tags: ["linux", "mac", "iterm2"]
+categories: ["linux"]
 ---
-
 
 Linux 命令行快捷键：
 
@@ -34,7 +33,7 @@ command + ; 查看历史命令
 
 command + shift + h 查看剪贴板历史
 
-command + opt + b 回看操作历史，左右键调整时间条 
+command + opt + b 回看操作历史，左右键调整时间条
 
 command + shift + i 多窗口同时输入模式，再次按可以取消该模式
 
@@ -47,4 +46,3 @@ command + shift + o 快速打开
 
 如果不小心关闭了窗口，可以使用`cmd + z`恢复，超时时间设置位置：
 ![2024-04-03-09-50-CP9eiG](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-04-03-09-50-CP9eiG.png)
-

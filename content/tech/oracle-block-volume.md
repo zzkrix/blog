@@ -1,9 +1,9 @@
 ---
-title: 'Oracle 服务器使用块存储'
-date: '2025-02-19T21:09:36+08:00'
+title: "Oracle 服务器使用块存储"
+date: "2025-02-19T21:09:36+08:00"
 draft: false
-tags: ['oracle']
-categories: ['oracle']
+tags: ["oracle"]
+categories: ["oracle"]
 ---
 
 ## 背景
@@ -42,7 +42,7 @@ categories: ['oracle']
 
 ![2025-02-19-21-44-Z6bFQD](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-02-19-21-44-Z6bFQD.png)
 
-执行 `fdisk -l` 可以看到多出来一块`/dev/sdb`(记住这个名字，后面用) 的新磁盘。
+执行 `fdisk -l` 可以看到多出来一块`/dev/sdb`（记住这个名字，后面用） 的新磁盘。
 
 ```bash
 $ fdisk -l

@@ -1,9 +1,9 @@
 ---
-title: '批量修改 git 仓库提交人信息'
-date: '2024-06-24T15:22:41+08:00'
+title: "批量修改 git 仓库提交人信息"
+date: "2024-06-24T15:22:41+08:00"
 draft: false
-tags: ['git']
-categories: ['git']
+tags: ["git"]
+categories: ["git"]
 ---
 
 > 仅限在可控状态下使用，否则会被别人打死。

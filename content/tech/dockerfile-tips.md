@@ -10,7 +10,7 @@ series: []
 
 ## ADD 和 COPY 区别
 
-如果 `<源路径>` 为一个 `tar` 压缩文件的话，压缩格式为 `gzip`, `bzip2` 以及 `xz` 的情况下，`ADD` 指令将会自动解压缩这个压缩文件到 `<目标路径>` 去。
+如果 `《源路径》` 为一个 `tar` 压缩文件的话，压缩格式为 `gzip`, `bzip2` 以及 `xz` 的情况下，`ADD` 指令将会自动解压缩这个压缩文件到 `《目标路径》` 去。
 
 在某些情况下，这个自动解压缩的功能非常有用，比如官方镜像 `ubuntu` 中：
 
@@ -45,7 +45,7 @@ CMD [ "curl", "-s", "http://myip.ipip.net" ]
 ```
 
 ```bash
-$ docker run myip curl -s http://myip.ipip.net -i
+docker run myip curl -s http://myip.ipip.net -i
 ```
 
 ### ENTRYPOINT
@@ -87,11 +87,11 @@ Connection: keep-alive
 
 ### ARG
 
-格式：`ARG <参数名>[=<默认值>]`
+格式：`ARG 《参数名》[=《默认值》]`
 
 构建参数和 `ENV` 的效果一样，都是设置环境变量。所不同的是，`ARG` 所设置的构建环境的环境变量，在将来容器运行时是不会存在这些环境变量的。但是不要因此就使用 `ARG` 保存密码之类的信息，因为 `docker history` 还是可以看到所有值的。
 
-`Dockerfile` 中的 `ARG` 指令是定义参数名称，以及定义其默认值。该默认值可以在构建命令 `docker build` 中用 `--build-arg <参数名>=<值>` 来覆盖。
+`Dockerfile` 中的 `ARG` 指令是定义参数名称，以及定义其默认值。该默认值可以在构建命令 `docker build` 中用 `--build-arg 《参数名》=《值》` 来覆盖。
 
 灵活的使用 `ARG` 指令，能够在不修改 Dockerfile 的情况下，构建出不同的镜像。
 
@@ -124,14 +124,14 @@ ARG DOCKER_USERNAME=library
 
 FROM ${DOCKER_USERNAME}/alpine
 
-# 在FROM 之后使用变量，必须在每个阶段分别指定
+# 在 FROM 之后使用变量，必须在每个阶段分别指定
 ARG DOCKER_USERNAME=library
 
 RUN set -x ; echo ${DOCKER_USERNAME}
 
 FROM ${DOCKER_USERNAME}/alpine
 
-# 在FROM 之后使用变量，必须在每个阶段分别指定
+# 在 FROM 之后使用变量，必须在每个阶段分别指定
 ARG DOCKER_USERNAME=library
 
 RUN set -x ; echo ${DOCKER_USERNAME}

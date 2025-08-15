@@ -1,11 +1,10 @@
 ---
-title: 'Linux 作业控制'
-date: '2024-06-30T23:17:03+08:00'
+title: "Linux 作业控制"
+date: "2024-06-30T23:17:03+08:00"
 draft: false
-tags: ['linux']
-categories: ['linux']
+tags: ["linux"]
+categories: ["linux"]
 ---
-
 
 ## 暂停当前的前台进程
 

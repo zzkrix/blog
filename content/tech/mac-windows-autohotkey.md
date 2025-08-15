@@ -1,11 +1,10 @@
 ---
-title: '虚拟机中使用 Mac 快捷键'
-date: '2024-06-24T09:47:05+08:00'
+title: "虚拟机中使用 Mac 快捷键"
+date: "2024-06-24T09:47:05+08:00"
 draft: false
-tags: ['mac', 'tools']
-categories: ['mac', 'tools']
+tags: ["mac", "tools"]
+categories: ["mac", "tools"]
 ---
-
 
 Mac 上使用虚拟机安装了 Windows，若想正常使用`cmd + c`、`cmd + v`等快捷键，按以下步骤操作。
 
@@ -187,11 +186,11 @@ Lwin & Tab::AltTab
 ; Custom mappings for special chars
 ; --------------------------------------------------------------
 
-;#ö::SendInput {[} 
-;#ä::SendInput {]} 
+;#ö::SendInput {[}
+;#ä::SendInput {]}
 
-;^ö::SendInput {{} 
-;^ä::SendInput {}} 
+;^ö::SendInput {{}
+;^ä::SendInput {}}
 
 
 ; --------------------------------------------------------------

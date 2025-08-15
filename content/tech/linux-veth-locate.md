@@ -11,10 +11,10 @@ series: []
 主要依赖两个文件，这两个文件在宿主机和容器内都有
 
 ```bash
-# 某虚拟设备对在`当前`机器 / 容器的ID编号
+# 某虚拟设备对在`当前`机器 / 容器的 ID 编号
 /sys/devices/virtual/net/***/ifindex
 
-# 某虚拟设备对在`对方`机器 / 容器的ID编号
+# 某虚拟设备对在`对方`机器 / 容器的 ID 编号
 /sys/devices/virtual/net/***/iflink
 ```
 
