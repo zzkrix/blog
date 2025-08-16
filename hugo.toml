@@ -220,7 +220,7 @@ avatarURL = ""
 # 头像的链接指向的 URL
 avatarLinkURL = ""
 #  主页显示的网站标题 (支持 HTML 格式)
-title = ""
+title = "🎉"
 # 主页显示的网站副标题
 subtitle = ""
 # 是否为副标题显示打字机动画
