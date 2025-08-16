@@ -48,7 +48,7 @@ categories: ["cloudflare", "内网穿透"]
 
 ![2025-04-07-15-29-9pFGPf](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-07-15-29-9pFGPf.png)
 
-然后点击上面的`公共主机名`，去配置公网域名，填写刚才购买的域名和你内网要代理的地址，这里我用的测试地址是 <http://192.168.1.165:8000。>
+然后点击上面的`公共主机名`，去配置公网域名，填写刚才购买的域名和你内网要代理的地址，这里我用的测试地址是 <http://192.168.1.165:8000>
 
 ![2025-04-07-15-56-xNTvYz](https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2025-04-07-15-56-xNTvYz.png)
 
