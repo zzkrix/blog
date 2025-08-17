@@ -4,7 +4,8 @@
       line-height: 2.5;
     }
   }
-  .post-meta-line{
+
+  .post-meta-line {
     line-height: 2.5;
   }
 }
@@ -17,3 +18,10 @@
   text-align: center;
 }
 
+.single .post-footer .post-nav a.prev {
+  float: right;
+}
+
+.single .post-footer .post-nav a.next {
+  float: left;
+}
