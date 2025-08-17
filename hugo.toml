@@ -150,13 +150,13 @@ themeChangeMode = "switch"
 # LOGO 的 URL
 logo = "https://avatars.githubusercontent.com/u/173884861?v=4"
 # 标题名称
-name = "避风港"
+name = "行者常至，为者常成～"
 # 你可以在名称 (允许 HTML 格式) 之前添加其他信息，例如图标
-pre = ""
+pre = "💥"
 # 你可以在名称 (允许 HTML 格式) 之后添加其他信息，例如图标
 post = ""
 #  是否为标题显示打字机动画
-typeit = false
+typeit = true
 
 # 页面底部信息配置
 [params.footer]
@@ -220,6 +220,7 @@ avatarURL = ""
 # 头像的链接指向的 URL
 avatarLinkURL = ""
 #  主页显示的网站标题 (支持 HTML 格式)
+#title = '<div style="text-align: center;"><p style="margin-bottom: 10px; font-size: 20px; font-weight: bold;">Hello World</p><img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-01-22-14-51-MgyDly.jpg" alt="eureka" style="display: block; margin: 0 auto 20px auto;"><img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-03-22-09-28-lBbSAW.gif" alt="gif" style="display: block; margin: 0 auto;"></div>'
 title = '<div style="text-align: center;"><img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-01-22-14-51-MgyDly.jpg" alt="eureka" style="display: block; margin: 0 auto 20px auto;"><img src="https://raw.githubusercontent.com/zzkrix/blog-images/main/assets/2024-03-22-09-28-lBbSAW.gif" alt="gif" style="display: block; margin: 0 auto;"></div>'
 
 # 主页显示的网站副标题
