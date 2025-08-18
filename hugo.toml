@@ -17,14 +17,14 @@ url = "/posts/"
 # 当你将鼠标悬停在此菜单链接上时，将显示的标题
 title = ""
 weight = 1
-# [[menu.main]]
-# identifier = "life"
-# pre = ""
-# post = ""
-# name = "生活"
-# url = "/life/"
-# title = ""
-# weight = 2
+[[menu.main]]
+identifier = "life"
+pre = ""
+post = ""
+name = "生活"
+url = "/life/"
+title = ""
+weight = 2
 [[menu.main]]
 identifier = "tags"
 pre = ""
