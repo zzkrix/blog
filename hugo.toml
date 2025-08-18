@@ -57,7 +57,7 @@ version = "0.4.X"
 # 网站名称
 title = "避风港"
 # 网站描述
-description = "xxx"
+description = ""
 # 网站关键词
 keywords = ["Theme", "Hugo"]
 #  网站默认主题样式 ("light", "dark", "black", "auto")
@@ -72,7 +72,7 @@ dateFormat = "2006-01-02"
 # 网站图片，用于 Open Graph 和 Twitter Cards
 images = ["/logo.png"]
 #  开启 PWA 支持
-enablePWA = false
+enablePWA = true
 # 【试验性功能】 缓存 markdown 中的图片链接到本地，详情请见：https://github.com/HEIGE-PCloud/DoIt/pull/860#issue-1574342372
 cacheRemoteImages = false
 # 【试验性功能】 使用 hugo 自带的图片处理功能生成 srcset 属性
@@ -151,13 +151,13 @@ themeChangeMode = "switch"
 # LOGO 的 URL
 logo = "https://avatars.githubusercontent.com/u/173884861?v=4"
 # 标题名称
-name = "行者常至，为者常成～"
+name = ""
 # 你可以在名称 （允许 HTML 格式） 之前添加其他信息，例如图标
 pre = "💥"
 # 你可以在名称 （允许 HTML 格式） 之后添加其他信息，例如图标
 post = ""
 #  是否为标题显示打字机动画
-typeit = true
+typeit = false
 
 # 页面底部信息配置
 [params.footer]
@@ -324,7 +324,7 @@ hiddenFromSearch = false
 #  是否使用 twemoji
 twemoji = false
 # 是否使用 lightgallery
-lightgallery = false
+lightgallery = true
 #  是否使用 ruby 扩展语法
 ruby = true
 #  是否使用 fraction 扩展语法
