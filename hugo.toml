@@ -490,9 +490,8 @@ serverURLs = ""
 emoji = ""
 # Waline 评论系统设置
 [params.page.comment.waline]
-#
-enable = false
-serverURL = ""
+enable = true
+serverURL = "https://comment.zzkrix.com"
 pageview = true
 comment = true
 # emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
