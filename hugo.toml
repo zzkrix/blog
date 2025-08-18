@@ -1,6 +1,7 @@
 baseURL = "https://zzkrix.com/"
 defaultContentLanguage = "zh-cn"
 languageCode = "zh-CN"
+languageName = "简体中文"
 hasCJKLanguage = true
 title = "避风港"
 theme = "DoIt"

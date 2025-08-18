@@ -1,10 +1,12 @@
 ---
 title: "About"
-comment: true
-toc: false
-displayModifiedDate: false
-displayWordCount: false
-displayReadingTime: false
+date: 2019-08-02T11:04:49+08:00
+draft: false
+
+lightgallery: true
+
+math:
+  enable: true
 ---
 
 💥 当做一个在线备忘录，记录平时遇到的问题、学到的知识，如果恰好对你有帮助，那就太好了。
