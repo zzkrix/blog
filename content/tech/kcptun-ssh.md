@@ -1,5 +1,5 @@
 ---
-title: "使用 kcptun 拯救我的 Oracle"
+title: "使用 kcptun 拯救我的 Oracle 服务器"
 date: "2025-08-18T21:51:03+08:00"
 draft: false
 tags: ["oracle", "kcp", "linux", "ssh"]
