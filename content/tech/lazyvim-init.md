@@ -1,5 +1,5 @@
 ---
-title: "lazyvim 简介"
+title: "lazyvim 备忘录"
 date: "2025-08-03T14:03:11+08:00"
 draft: false
 tags: ["vim", "lazyvim"]
