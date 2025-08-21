@@ -1,3 +1,1 @@
-# blog
-
-a
+content/about/index.md
