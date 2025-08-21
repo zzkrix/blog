@@ -11,7 +11,7 @@
 # -------------------------------------------------------------------------------------
 
 # website title
-title = "避风港"
+title = "💥避风港"
 # Hostname (and path) to the root
 baseURL = "https://zzkrix.com"
 # theme list
@@ -1227,10 +1227,10 @@ scale = true
 fullscreen = true
 # FixIt 0.3.0 | NEW Related content config (https://gohugo.io/content-management/related/)
 [params.page.related]
-enable = false
+enable = true
 count = 5
 # FixIt 0.3.20 | NEW position of related content, optional values: ["aside", "footer"]
-position = ["aside", "footer"]
+position = ["aside"]
 # FixIt 0.2.17 | NEW Donate (Sponsor) settings
 [params.page.reward]
 enable = false
