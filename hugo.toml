@@ -372,9 +372,9 @@ collection = "collections"
 # FixIt 0.2.15 | CHANGED FixIt theme version
 version = "0.3.X" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
 # site description
-description = ""
+description = "个人笔记"
 # site keywords
-keywords = []
+keywords = ["personal", "notes", "tech", "programer", "coding", "lab"]
 # site default theme ["light", "dark", "auto"]
 defaultTheme = "light"
 # which hash function used for SRI, when empty, no SRI is used
@@ -385,7 +385,7 @@ dateFormat = "2006-01-02"
 # website images for Open Graph and Twitter Cards
 images = []
 # FixIt 0.2.12 | NEW enable PWA
-enablePWA = false
+enablePWA = true
 # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
 externalIcon = false
 # FixIt 0.3.13 | NEW whether to capitalize titles
@@ -414,12 +414,12 @@ disableThemeInject = false
 name = "zzkrix"
 email = "zzkrix56@gmail.com"
 link = "https://zzkrix.com"
-avatar = "https://avatars.githubusercontent.com/u/173884861?v=4"
+avatar = "https://avatars.githubusercontent.com/u/173884861"
 
 # FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
 [params.gitInfo]
 # e.g. "https://github.com/hugo-fixit/docs"
-repo = ""
+repo = "https://github.com/zzkrix/blog"
 branch = "main"
 # the content directory path relative to the root of the repository
 dir = "content"
@@ -576,7 +576,7 @@ dateFormat = "01-02"
 # Section page config (all pages in section)
 [params.section]
 # special amount of pages in each section page
-pagination.pagerSize = 10
+pagination.pagerSize = 20
 # date format (month and day)
 dateFormat = "01-02"
 # FixIt 0.3.10 | NEW Section feed config for RSS, Atom and JSON feed.
@@ -589,7 +589,7 @@ fullText = false
 # Term list (category or tag) page config
 [params.list]
 # special amount of posts in each list page
-pagination.pagerSize = 10
+pagination.pagerSize = 20
 # date format (month and day)
 dateFormat = "01-02"
 # FixIt 0.3.10 | NEW Term list feed config for RSS, Atom and JSON feed.
@@ -602,10 +602,10 @@ fullText = false
 # FixIt 0.3.13 | NEW recently updated pages config for archives, section and term list
 [params.recentlyUpdated]
 archives = true
-section = false
-list = false
+section = true
+list = true
 days = 30
-maxCount = 10
+maxCount = 5
 
 # FixIt 0.2.17 | NEW TagCloud config for tags page
 [params.tagcloud]
@@ -621,13 +621,13 @@ orderby = "name" # Order of tags, optional values: ["name", "count"]
 [params.home.profile]
 enable = true
 # Gravatar Email for preferred avatar in home page
-gravatarEmail = ""
+gravatarEmail = "zzkrix56@gmail.com"
 # URL of avatar shown in home page
-avatarURL = "https://avatars.githubusercontent.com/u/173884861?v=4"
+avatarURL = "https://avatars.githubusercontent.com/u/173884861"
 # FixIt 0.2.17 | NEW identifier of avatar menu link
 avatarMenu = "about"
 # title shown in home page (HTML format is supported)
-title = ""
+# title = "zzZ's notes"
 # subtitle shown in home page (HTML format is supported)
 subtitle = "行者常至，为者常成。"
 # whether to use typeit animation for subtitle
@@ -635,7 +635,7 @@ typeit = true
 # whether to show social links
 social = true
 # disclaimer (HTML format is supported)
-disclaimer = ""
+disclaimer = " "
 # Home page posts
 [params.home.posts]
 enable = true
@@ -928,7 +928,7 @@ objectFit = false
 enable = true
 permalink = "https://github.com/zzkrix/blog"
 title = "View source on GitHub"
-position = "right"                           # ["left", "right"]
+position = "left"                            # ["left", "right"]
 
 # FixIt 0.2.14 | NEW Gravatar config
 [params.gravatar]
@@ -1086,7 +1086,7 @@ twemoji = false
 # FixIt 0.2.18 | CHANGED whether to enable lightgallery
 # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
 # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
-lightgallery = false
+lightgallery = "force"
 # whether to enable the ruby extended syntax
 ruby = true
 # whether to enable the fraction extended syntax
@@ -1213,7 +1213,7 @@ copy = true
 # FixIt 0.2.13 | NEW whether to show the edit button of the code wrapper
 edit = false
 # the maximum number of lines of displayed code by default
-maxShownLines = 999
+maxShownLines = 100
 # Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
 [params.page.mapbox]
 # access token of Mapbox GL JS
@@ -1273,7 +1273,7 @@ Myspace = false
 Blogger = false
 Baidu = false
 Odnoklassniki = false
-Evernote = false
+Evernote = true
 Skype = false
 Trello = false
 Mix = false
