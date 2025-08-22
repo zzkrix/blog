@@ -65,7 +65,8 @@ class = ""
 # whether set as a draft menu item whose function is similar to a draft post/page
 draft = false
 # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-icon = "fa-solid fa-archive"
+# icon = "fa-solid fa-archive"
+icon = "fa-fw fa-solid fa-book"
 # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
 type = ""
 # FixIt 0.3.9 | NEW whether to show the submenu item divider line
@@ -81,7 +82,8 @@ url = "/categories/"
 title = ""
 weight = 6
 [menu.main.params]
-icon = "fa-solid fa-folder-tree"
+# icon = "fa-solid fa-folder-tree"
+icon = "fa-fw fa-solid fa-folder-open"
 
 [[menu.main]]
 identifier = "tags"
@@ -98,12 +100,14 @@ icon = "fa-solid fa-tags"
 [[menu.main]]
 identifier = "tools"
 parent = ""
-pre = "🔧"
+pre = ""
 post = ""
 name = "工具"
 url = ""
 title = ""
 weight = 8
+[menu.main.params]
+icon = "fa-solid fa-hammer"
 [[menu.main]]
 identifier = "browser-extension"
 parent = "tools"
@@ -132,7 +136,8 @@ name = "关于"
 url = "/about/"
 title = ""
 weight = 9
-
+[menu.main.params]
+icon = "fa-fw fa-solid fa-circle-info"
 # -------------------------------------------------------------------------------------
 # Related content Configuration
 # See: https://gohugo.io/content-management/related/
