@@ -80,7 +80,7 @@ post = ""
 name = "分类"
 url = "/categories/"
 title = ""
-weight = 6
+weight = 2
 [menu.main.params]
 # icon = "fa-solid fa-folder-tree"
 icon = "fa-fw fa-solid fa-folder-open"
@@ -93,7 +93,7 @@ post = ""
 name = "标签"
 url = "/tags/"
 title = ""
-weight = 7
+weight = 3
 [menu.main.params]
 icon = "fa-solid fa-tags"
 
@@ -105,7 +105,7 @@ post = ""
 name = "工具"
 url = ""
 title = ""
-weight = 8
+weight = 4
 [menu.main.params]
 icon = "fa-solid fa-hammer"
 [[menu.main]]
@@ -126,6 +126,18 @@ name = "汽车用车成本分析"
 url = "https://zzkrix.com/tools/car-cost-analysis"
 title = ""
 weight = 2
+
+[[menu.main]]
+identifier = "chatroom"
+parent = ""
+pre = ""
+post = ""
+name = "聊天室"
+url = "/chatroom/"
+title = ""
+weight = 5
+[menu.main.params]
+icon = "fa-solid fa-comments"
 
 [[menu.main]]
 identifier = "about"
@@ -545,7 +557,7 @@ gov = ""
 # ICP info only in China (HTML format is supported)
 icp = ""
 # license info (HTML format is supported)
-license = "non-ICP" # 为了不让icp信息单独显示一行，将icp写在这
+license = "non-ICP" # 为了不让 icp 信息单独显示一行，将 icp 写在这
 # FixIt 0.3.0 | NEW whether to show Hugo and theme info
 [params.footer.powered]
 enable = true
