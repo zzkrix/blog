@@ -55,3 +55,29 @@ READ UNCOMMITTED 提供了事务之间最小限度的隔离。除了容易产生
 > Q: 在可重复读隔离级别下，快照是什么时候生成的？
 >
 > A: 事务开始的时候。
+
+## 其他
+
+查询当前数据库运行中的事务：
+
+```sql
+SELECT * FROM information_schema.innodb_trx
+```
+
+从数据库视角看所有 sql 的执行记录：
+
+> bin log 只能看到所有的变更记录，看不到select
+> 
+> 开启这个可以看到所有的请求
+>
+> ⚠️ 性能损耗大，谨慎使用
+
+```sql
+# 查看log记录是否开启
+SHOW VARIABLES LIKE 'general_log%';
+
+# 开启log历史，输出到指定文件
+SET GLOBAL general_log = 1;
+SET GLOBAL log_output = 'FILE';
+SET GLOBAL general_log_file = '/var/lib/mysql/query.log';
+```
