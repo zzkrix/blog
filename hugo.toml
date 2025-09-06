@@ -11,7 +11,7 @@
 # -------------------------------------------------------------------------------------
 
 # website title
-title = "💥避风港"
+title = "💥Zzz's Notes"
 # Hostname (and path) to the root
 baseURL = "https://zzkrix.com"
 # theme list
@@ -109,12 +109,21 @@ weight = 4
 [menu.main.params]
 icon = "fa-solid fa-hammer"
 [[menu.main]]
-identifier = "browser-extension"
+identifier = "kimi-history-cleaner"
 parent = "tools"
 pre = "🧹"
 post = ""
-name = "浏览器扩展"
+name = "浏览器扩展-kimi会话清理助手"
 url = "https://github.com/zzkrix/kimi-history-cleaner"
+title = ""
+weight = 1
+[[menu.main]]
+identifier = "page-replacer"
+parent = "tools"
+pre = "📝"
+post = ""
+name = "浏览器扩展-网页内容替换助手"
+url = "https://github.com/zzkrix/page-replacer"
 title = ""
 weight = 1
 [[menu.main]]
@@ -128,12 +137,12 @@ title = ""
 weight = 2
 
 [[menu.main]]
-identifier = "chatroom"
+identifier = "quick-notes"
 parent = ""
 pre = ""
 post = ""
-name = "聊天室"
-url = "/chatroom/"
+name = "随手记"
+url = "/quick-notes/"
 title = ""
 weight = 5
 [menu.main.params]
@@ -615,7 +624,7 @@ fullText = false
 [params.recentlyUpdated]
 archives = true
 section = true
-list = true
+list = false
 days = 30
 maxCount = 5
 
